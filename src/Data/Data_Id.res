@@ -38,7 +38,8 @@ module Map = {
   type key = t
   type t<'v> = Belt.Map.t<key, 'v, identity>
   let fromStringArray = arr => arr->Belt.Map.fromArray(~id)
-  let toStringArray = arr => Belt.Map.toArray(arr)
+  let toStringArray = x => Belt.Map.toArray(x)
+  let keysToStringArray = x => Belt.Map.keysToArray(x)
 }
 
 module Set = {

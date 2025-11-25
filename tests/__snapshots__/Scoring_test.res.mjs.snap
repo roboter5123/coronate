@@ -4,378 +4,1248 @@ exports[`Snapshot of score table, score test 1`] = `
 {
   "asFragment": [Function],
   "baseElement": <body
-    style="cursor: wait;"
+    style="cursor: auto;"
   >
     <div>
-      <div
-        class="winBody )"
+      <table
+        class="pagescores__table"
       >
-        <div
-          class="win__sidebar"
+        <caption
+          class="title-40"
         >
-          <nav>
-            <ul
-              style="margin: 0px;"
+          Score testing
+        </caption>
+        <thead>
+          <tr
+            class="pagescores__topheader"
+          >
+            <th
+              class="title-10"
+              scope="col"
             >
-              <li>
-                <a
-                  aria-current="true"
-                  href="/"
-                >
-                  <svg
-                    fill="none"
-                    height="24"
-                    stroke="currentColor"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    viewBox="0 0 24 24"
-                    width="24"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"
-                    />
-                    <polyline
-                      points="9 22 9 12 15 12 15 22"
-                    />
-                  </svg>
-                  <span
-                    class="sidebar__hide-on-close"
-                  >
-                     Home
-                  </span>
-                </a>
-              </li>
-              <li>
-                <a
-                  aria-current="false"
-                  href="/tourneys"
-                >
-                  <svg
-                    fill="none"
-                    height="24"
-                    stroke="currentColor"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    viewBox="0 0 24 24"
-                    width="24"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <circle
-                      cx="12"
-                      cy="8"
-                      r="7"
-                    />
-                    <polyline
-                      points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"
-                    />
-                  </svg>
-                  <span
-                    class="sidebar__hide-on-close"
-                  >
-                     Tournaments
-                  </span>
-                </a>
-              </li>
-              <li>
-                <a
-                  aria-current="false"
-                  href="/players"
-                >
-                  <svg
-                    fill="none"
-                    height="24"
-                    stroke="currentColor"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    viewBox="0 0 24 24"
-                    width="24"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"
-                    />
-                    <circle
-                      cx="9"
-                      cy="7"
-                      r="4"
-                    />
-                    <path
-                      d="M23 21v-2a4 4 0 0 0-3-3.87"
-                    />
-                    <path
-                      d="M16 3.13a4 4 0 0 1 0 7.75"
-                    />
-                  </svg>
-                  <span
-                    class="sidebar__hide-on-close"
-                  >
-                     Players
-                  </span>
-                </a>
-              </li>
-              <li>
-                <a
-                  aria-current="false"
-                  href="/options"
-                >
-                  <svg
-                    fill="none"
-                    height="24"
-                    stroke="currentColor"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    viewBox="0 0 24 24"
-                    width="24"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <circle
-                      cx="12"
-                      cy="12"
-                      r="3"
-                    />
-                    <path
-                      d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"
-                    />
-                  </svg>
-                  <span
-                    class="sidebar__hide-on-close"
-                  >
-                     Options
-                  </span>
-                </a>
-              </li>
-              <li>
-                <a
-                  aria-current="false"
-                  href="/timecalc"
-                >
-                  <svg
-                    fill="none"
-                    height="24"
-                    stroke="currentColor"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    viewBox="0 0 24 24"
-                    width="24"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <circle
-                      cx="12"
-                      cy="12"
-                      r="10"
-                    />
-                    <polyline
-                      points="12 6 12 12 16 14"
-                    />
-                  </svg>
-                  <span
-                    class="sidebar__hide-on-close"
-                  >
-                     Time calculator
-                  </span>
-                </a>
-              </li>
-            </ul>
-          </nav>
-        </div>
-        <div
-          class="win__content"
-        >
-          Loading...
-        </div>
-      </div>
+              Rank
+            </th>
+            <th
+              class="title-10"
+              scope="col"
+            >
+              Name
+            </th>
+            <th
+              class="title-10"
+              scope="col"
+            >
+              Score
+            </th>
+            <th
+              class="title-10"
+              scope="col"
+            >
+              Modified median
+            </th>
+            <th
+              class="title-10"
+              scope="col"
+            >
+              Solkoff
+            </th>
+            <th
+              class="title-10"
+              scope="col"
+            >
+              Cumulative
+            </th>
+            <th
+              class="title-10"
+              scope="col"
+            >
+              Cumulative of opposition
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr
+            class="pagescores__row"
+          >
+            <th
+              class="table__number pagescores__number pagescores__rank pagescores__row-th"
+              rowspan="1"
+              scope="row"
+            >
+              1
+            </th>
+            <th
+              class="pagescores__row-th pagescores__playername"
+              data-testid="rank-1.0"
+              scope="row"
+            >
+              TV's Max
+            </th>
+            <td
+              class="pagescores__number pagescores__row-td table__number"
+            >
+              3
+            </td>
+            <td
+              class="pagescores__row-td table__number"
+            >
+              1
+            </td>
+            <td
+              class="pagescores__row-td table__number"
+            >
+              3
+            </td>
+            <td
+              class="pagescores__row-td table__number"
+            >
+              6
+            </td>
+            <td
+              class="pagescores__row-td table__number"
+            >
+              4
+            </td>
+          </tr>
+          <tr
+            class="pagescores__row"
+          >
+            <th
+              class="table__number pagescores__number pagescores__rank pagescores__row-th"
+              rowspan="1"
+              scope="row"
+            >
+              2
+            </th>
+            <th
+              class="pagescores__row-th pagescores__playername"
+              data-testid="rank-2.0"
+              scope="row"
+            >
+              Bobo Professor
+            </th>
+            <td
+              class="pagescores__number pagescores__row-td table__number"
+            >
+              3
+            </td>
+            <td
+              class="pagescores__row-td table__number"
+            >
+              0
+            </td>
+            <td
+              class="pagescores__row-td table__number"
+            >
+              2
+            </td>
+            <td
+              class="pagescores__row-td table__number"
+            >
+              3
+            </td>
+            <td
+              class="pagescores__row-td table__number"
+            >
+              3
+            </td>
+          </tr>
+          <tr
+            class="pagescores__row"
+          >
+            <th
+              class="table__number pagescores__number pagescores__rank pagescores__row-th"
+              rowspan="1"
+              scope="row"
+            >
+              3
+            </th>
+            <th
+              class="pagescores__row-th pagescores__playername"
+              data-testid="rank-3.0"
+              scope="row"
+            >
+              TV's Frank
+            </th>
+            <td
+              class="pagescores__number pagescores__row-td table__number"
+            >
+              2
+            </td>
+            <td
+              class="pagescores__row-td table__number"
+            >
+              2
+            </td>
+            <td
+              class="pagescores__row-td table__number"
+            >
+              7
+            </td>
+            <td
+              class="pagescores__row-td table__number"
+            >
+              3
+            </td>
+            <td
+              class="pagescores__row-td table__number"
+            >
+              12
+            </td>
+          </tr>
+          <tr
+            class="pagescores__row"
+          >
+            <th
+              class="table__number pagescores__number pagescores__rank pagescores__row-th"
+              rowspan="1"
+              scope="row"
+            >
+              4
+            </th>
+            <th
+              class="pagescores__row-th pagescores__playername"
+              data-testid="rank-4.0"
+              scope="row"
+            >
+              Mike Nelson
+            </th>
+            <td
+              class="pagescores__number pagescores__row-td table__number"
+            >
+              2
+            </td>
+            <td
+              class="pagescores__row-td table__number"
+            >
+              2
+            </td>
+            <td
+              class="pagescores__row-td table__number"
+            >
+              5
+            </td>
+            <td
+              class="pagescores__row-td table__number"
+            >
+              4
+            </td>
+            <td
+              class="pagescores__row-td table__number"
+            >
+              6
+            </td>
+          </tr>
+          <tr
+            class="pagescores__row"
+          >
+            <th
+              class="table__number pagescores__number pagescores__rank pagescores__row-th"
+              rowspan="1"
+              scope="row"
+            >
+              5
+            </th>
+            <th
+              class="pagescores__row-th pagescores__playername"
+              data-testid="rank-5.0"
+              scope="row"
+            >
+              Brain Guy
+            </th>
+            <td
+              class="pagescores__number pagescores__row-td table__number"
+            >
+              2
+            </td>
+            <td
+              class="pagescores__row-td table__number"
+            >
+              2
+            </td>
+            <td
+              class="pagescores__row-td table__number"
+            >
+              5
+            </td>
+            <td
+              class="pagescores__row-td table__number"
+            >
+              3
+            </td>
+            <td
+              class="pagescores__row-td table__number"
+            >
+              10
+            </td>
+          </tr>
+          <tr
+            class="pagescores__row"
+          >
+            <th
+              class="table__number pagescores__number pagescores__rank pagescores__row-th"
+              rowspan="1"
+              scope="row"
+            >
+              6
+            </th>
+            <th
+              class="pagescores__row-th pagescores__playername"
+              data-testid="rank-6.0"
+              scope="row"
+            >
+              Clayton Forrester
+            </th>
+            <td
+              class="pagescores__number pagescores__row-td table__number"
+            >
+              2
+            </td>
+            <td
+              class="pagescores__row-td table__number"
+            >
+              1
+            </td>
+            <td
+              class="pagescores__row-td table__number"
+            >
+              4
+            </td>
+            <td
+              class="pagescores__row-td table__number"
+            >
+              5
+            </td>
+            <td
+              class="pagescores__row-td table__number"
+            >
+              5
+            </td>
+          </tr>
+          <tr
+            class="pagescores__row"
+          >
+            <th
+              class="table__number pagescores__number pagescores__rank pagescores__row-th"
+              rowspan="1"
+              scope="row"
+            >
+              7
+            </th>
+            <th
+              class="pagescores__row-th pagescores__playername"
+              data-testid="rank-7.0"
+              scope="row"
+            >
+              Joel Robinson
+            </th>
+            <td
+              class="pagescores__number pagescores__row-td table__number"
+            >
+              2
+            </td>
+            <td
+              class="pagescores__row-td table__number"
+            >
+              1
+            </td>
+            <td
+              class="pagescores__row-td table__number"
+            >
+              3
+            </td>
+            <td
+              class="pagescores__row-td table__number"
+            >
+              4
+            </td>
+            <td
+              class="pagescores__row-td table__number"
+            >
+              3
+            </td>
+          </tr>
+          <tr
+            class="pagescores__row"
+          >
+            <th
+              class="table__number pagescores__number pagescores__rank pagescores__row-th"
+              rowspan="1"
+              scope="row"
+            >
+              8
+            </th>
+            <th
+              class="pagescores__row-th pagescores__playername"
+              data-testid="rank-8.0"
+              scope="row"
+            >
+              Crow T Robot
+            </th>
+            <td
+              class="pagescores__number pagescores__row-td table__number"
+            >
+              2
+            </td>
+            <td
+              class="pagescores__row-td table__number"
+            >
+              0
+            </td>
+            <td
+              class="pagescores__row-td table__number"
+            >
+              2
+            </td>
+            <td
+              class="pagescores__row-td table__number"
+            >
+              2
+            </td>
+            <td
+              class="pagescores__row-td table__number"
+            >
+              4
+            </td>
+          </tr>
+          <tr
+            class="pagescores__row"
+          >
+            <th
+              class="table__number pagescores__number pagescores__rank pagescores__row-th"
+              rowspan="1"
+              scope="row"
+            >
+              9
+            </th>
+            <th
+              class="pagescores__row-th pagescores__playername"
+              data-testid="rank-9.0"
+              scope="row"
+            >
+              Cambot 
+            </th>
+            <td
+              class="pagescores__number pagescores__row-td table__number"
+            >
+              1
+            </td>
+            <td
+              class="pagescores__row-td table__number"
+            >
+              2
+            </td>
+            <td
+              class="pagescores__row-td table__number"
+            >
+              6
+            </td>
+            <td
+              class="pagescores__row-td table__number"
+            >
+              1
+            </td>
+            <td
+              class="pagescores__row-td table__number"
+            >
+              12
+            </td>
+          </tr>
+          <tr
+            class="pagescores__row"
+          >
+            <th
+              class="table__number pagescores__number pagescores__rank pagescores__row-th"
+              rowspan="1"
+              scope="row"
+            >
+              10
+            </th>
+            <th
+              class="pagescores__row-th pagescores__playername"
+              data-testid="rank-10.0"
+              scope="row"
+            >
+              Jonah Heston
+            </th>
+            <td
+              class="pagescores__number pagescores__row-td table__number"
+            >
+              1
+            </td>
+            <td
+              class="pagescores__row-td table__number"
+            >
+              1
+            </td>
+            <td
+              class="pagescores__row-td table__number"
+            >
+              3
+            </td>
+            <td
+              class="pagescores__row-td table__number"
+            >
+              2
+            </td>
+            <td
+              class="pagescores__row-td table__number"
+            >
+              6
+            </td>
+          </tr>
+          <tr
+            class="pagescores__row"
+          >
+            <th
+              class="table__number pagescores__number pagescores__rank pagescores__row-th"
+              rowspan="1"
+              scope="row"
+            >
+              11
+            </th>
+            <th
+              class="pagescores__row-th pagescores__playername"
+              data-testid="rank-11.0"
+              scope="row"
+            >
+              Tom Servo
+            </th>
+            <td
+              class="pagescores__number pagescores__row-td table__number"
+            >
+              1
+            </td>
+            <td
+              class="pagescores__row-td table__number"
+            >
+              0
+            </td>
+            <td
+              class="pagescores__row-td table__number"
+            >
+              4
+            </td>
+            <td
+              class="pagescores__row-td table__number"
+            >
+              0
+            </td>
+            <td
+              class="pagescores__row-td table__number"
+            >
+              9
+            </td>
+          </tr>
+          <tr
+            class="pagescores__row"
+          >
+            <th
+              class="table__number pagescores__number pagescores__rank pagescores__row-th"
+              rowspan="1"
+              scope="row"
+            >
+              12
+            </th>
+            <th
+              class="pagescores__row-th pagescores__playername"
+              data-testid="rank-12.0"
+              scope="row"
+            >
+              Pearl Forrester
+            </th>
+            <td
+              class="pagescores__number pagescores__row-td table__number"
+            >
+              0
+            </td>
+            <td
+              class="pagescores__row-td table__number"
+            >
+              2
+            </td>
+            <td
+              class="pagescores__row-td table__number"
+            >
+              7
+            </td>
+            <td
+              class="pagescores__row-td table__number"
+            >
+              0
+            </td>
+            <td
+              class="pagescores__row-td table__number"
+            >
+              10
+            </td>
+          </tr>
+          <tr
+            class="pagescores__row"
+          >
+            <th
+              class="table__number pagescores__number pagescores__rank pagescores__row-th"
+              rowspan="1"
+              scope="row"
+            >
+              13
+            </th>
+            <th
+              class="pagescores__row-th pagescores__playername"
+              data-testid="rank-13.0"
+              scope="row"
+            >
+              Kinga Forrester
+            </th>
+            <td
+              class="pagescores__number pagescores__row-td table__number"
+            >
+              0
+            </td>
+            <td
+              class="pagescores__row-td table__number"
+            >
+              2
+            </td>
+            <td
+              class="pagescores__row-td table__number"
+            >
+              6
+            </td>
+            <td
+              class="pagescores__row-td table__number"
+            >
+              0
+            </td>
+            <td
+              class="pagescores__row-td table__number"
+            >
+              10
+            </td>
+          </tr>
+        </tbody>
+      </table>
     </div>
   </body>,
   "container": <div>
-    <div
-      class="winBody )"
+    <table
+      class="pagescores__table"
     >
-      <div
-        class="win__sidebar"
+      <caption
+        class="title-40"
       >
-        <nav>
-          <ul
-            style="margin: 0px;"
+        Score testing
+      </caption>
+      <thead>
+        <tr
+          class="pagescores__topheader"
+        >
+          <th
+            class="title-10"
+            scope="col"
           >
-            <li>
-              <a
-                aria-current="true"
-                href="/"
-              >
-                <svg
-                  fill="none"
-                  height="24"
-                  stroke="currentColor"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  viewBox="0 0 24 24"
-                  width="24"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"
-                  />
-                  <polyline
-                    points="9 22 9 12 15 12 15 22"
-                  />
-                </svg>
-                <span
-                  class="sidebar__hide-on-close"
-                >
-                   Home
-                </span>
-              </a>
-            </li>
-            <li>
-              <a
-                aria-current="false"
-                href="/tourneys"
-              >
-                <svg
-                  fill="none"
-                  height="24"
-                  stroke="currentColor"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  viewBox="0 0 24 24"
-                  width="24"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <circle
-                    cx="12"
-                    cy="8"
-                    r="7"
-                  />
-                  <polyline
-                    points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"
-                  />
-                </svg>
-                <span
-                  class="sidebar__hide-on-close"
-                >
-                   Tournaments
-                </span>
-              </a>
-            </li>
-            <li>
-              <a
-                aria-current="false"
-                href="/players"
-              >
-                <svg
-                  fill="none"
-                  height="24"
-                  stroke="currentColor"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  viewBox="0 0 24 24"
-                  width="24"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"
-                  />
-                  <circle
-                    cx="9"
-                    cy="7"
-                    r="4"
-                  />
-                  <path
-                    d="M23 21v-2a4 4 0 0 0-3-3.87"
-                  />
-                  <path
-                    d="M16 3.13a4 4 0 0 1 0 7.75"
-                  />
-                </svg>
-                <span
-                  class="sidebar__hide-on-close"
-                >
-                   Players
-                </span>
-              </a>
-            </li>
-            <li>
-              <a
-                aria-current="false"
-                href="/options"
-              >
-                <svg
-                  fill="none"
-                  height="24"
-                  stroke="currentColor"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  viewBox="0 0 24 24"
-                  width="24"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <circle
-                    cx="12"
-                    cy="12"
-                    r="3"
-                  />
-                  <path
-                    d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"
-                  />
-                </svg>
-                <span
-                  class="sidebar__hide-on-close"
-                >
-                   Options
-                </span>
-              </a>
-            </li>
-            <li>
-              <a
-                aria-current="false"
-                href="/timecalc"
-              >
-                <svg
-                  fill="none"
-                  height="24"
-                  stroke="currentColor"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  viewBox="0 0 24 24"
-                  width="24"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <circle
-                    cx="12"
-                    cy="12"
-                    r="10"
-                  />
-                  <polyline
-                    points="12 6 12 12 16 14"
-                  />
-                </svg>
-                <span
-                  class="sidebar__hide-on-close"
-                >
-                   Time calculator
-                </span>
-              </a>
-            </li>
-          </ul>
-        </nav>
-      </div>
-      <div
-        class="win__content"
-      >
-        Loading...
-      </div>
-    </div>
+            Rank
+          </th>
+          <th
+            class="title-10"
+            scope="col"
+          >
+            Name
+          </th>
+          <th
+            class="title-10"
+            scope="col"
+          >
+            Score
+          </th>
+          <th
+            class="title-10"
+            scope="col"
+          >
+            Modified median
+          </th>
+          <th
+            class="title-10"
+            scope="col"
+          >
+            Solkoff
+          </th>
+          <th
+            class="title-10"
+            scope="col"
+          >
+            Cumulative
+          </th>
+          <th
+            class="title-10"
+            scope="col"
+          >
+            Cumulative of opposition
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr
+          class="pagescores__row"
+        >
+          <th
+            class="table__number pagescores__number pagescores__rank pagescores__row-th"
+            rowspan="1"
+            scope="row"
+          >
+            1
+          </th>
+          <th
+            class="pagescores__row-th pagescores__playername"
+            data-testid="rank-1.0"
+            scope="row"
+          >
+            TV's Max
+          </th>
+          <td
+            class="pagescores__number pagescores__row-td table__number"
+          >
+            3
+          </td>
+          <td
+            class="pagescores__row-td table__number"
+          >
+            1
+          </td>
+          <td
+            class="pagescores__row-td table__number"
+          >
+            3
+          </td>
+          <td
+            class="pagescores__row-td table__number"
+          >
+            6
+          </td>
+          <td
+            class="pagescores__row-td table__number"
+          >
+            4
+          </td>
+        </tr>
+        <tr
+          class="pagescores__row"
+        >
+          <th
+            class="table__number pagescores__number pagescores__rank pagescores__row-th"
+            rowspan="1"
+            scope="row"
+          >
+            2
+          </th>
+          <th
+            class="pagescores__row-th pagescores__playername"
+            data-testid="rank-2.0"
+            scope="row"
+          >
+            Bobo Professor
+          </th>
+          <td
+            class="pagescores__number pagescores__row-td table__number"
+          >
+            3
+          </td>
+          <td
+            class="pagescores__row-td table__number"
+          >
+            0
+          </td>
+          <td
+            class="pagescores__row-td table__number"
+          >
+            2
+          </td>
+          <td
+            class="pagescores__row-td table__number"
+          >
+            3
+          </td>
+          <td
+            class="pagescores__row-td table__number"
+          >
+            3
+          </td>
+        </tr>
+        <tr
+          class="pagescores__row"
+        >
+          <th
+            class="table__number pagescores__number pagescores__rank pagescores__row-th"
+            rowspan="1"
+            scope="row"
+          >
+            3
+          </th>
+          <th
+            class="pagescores__row-th pagescores__playername"
+            data-testid="rank-3.0"
+            scope="row"
+          >
+            TV's Frank
+          </th>
+          <td
+            class="pagescores__number pagescores__row-td table__number"
+          >
+            2
+          </td>
+          <td
+            class="pagescores__row-td table__number"
+          >
+            2
+          </td>
+          <td
+            class="pagescores__row-td table__number"
+          >
+            7
+          </td>
+          <td
+            class="pagescores__row-td table__number"
+          >
+            3
+          </td>
+          <td
+            class="pagescores__row-td table__number"
+          >
+            12
+          </td>
+        </tr>
+        <tr
+          class="pagescores__row"
+        >
+          <th
+            class="table__number pagescores__number pagescores__rank pagescores__row-th"
+            rowspan="1"
+            scope="row"
+          >
+            4
+          </th>
+          <th
+            class="pagescores__row-th pagescores__playername"
+            data-testid="rank-4.0"
+            scope="row"
+          >
+            Mike Nelson
+          </th>
+          <td
+            class="pagescores__number pagescores__row-td table__number"
+          >
+            2
+          </td>
+          <td
+            class="pagescores__row-td table__number"
+          >
+            2
+          </td>
+          <td
+            class="pagescores__row-td table__number"
+          >
+            5
+          </td>
+          <td
+            class="pagescores__row-td table__number"
+          >
+            4
+          </td>
+          <td
+            class="pagescores__row-td table__number"
+          >
+            6
+          </td>
+        </tr>
+        <tr
+          class="pagescores__row"
+        >
+          <th
+            class="table__number pagescores__number pagescores__rank pagescores__row-th"
+            rowspan="1"
+            scope="row"
+          >
+            5
+          </th>
+          <th
+            class="pagescores__row-th pagescores__playername"
+            data-testid="rank-5.0"
+            scope="row"
+          >
+            Brain Guy
+          </th>
+          <td
+            class="pagescores__number pagescores__row-td table__number"
+          >
+            2
+          </td>
+          <td
+            class="pagescores__row-td table__number"
+          >
+            2
+          </td>
+          <td
+            class="pagescores__row-td table__number"
+          >
+            5
+          </td>
+          <td
+            class="pagescores__row-td table__number"
+          >
+            3
+          </td>
+          <td
+            class="pagescores__row-td table__number"
+          >
+            10
+          </td>
+        </tr>
+        <tr
+          class="pagescores__row"
+        >
+          <th
+            class="table__number pagescores__number pagescores__rank pagescores__row-th"
+            rowspan="1"
+            scope="row"
+          >
+            6
+          </th>
+          <th
+            class="pagescores__row-th pagescores__playername"
+            data-testid="rank-6.0"
+            scope="row"
+          >
+            Clayton Forrester
+          </th>
+          <td
+            class="pagescores__number pagescores__row-td table__number"
+          >
+            2
+          </td>
+          <td
+            class="pagescores__row-td table__number"
+          >
+            1
+          </td>
+          <td
+            class="pagescores__row-td table__number"
+          >
+            4
+          </td>
+          <td
+            class="pagescores__row-td table__number"
+          >
+            5
+          </td>
+          <td
+            class="pagescores__row-td table__number"
+          >
+            5
+          </td>
+        </tr>
+        <tr
+          class="pagescores__row"
+        >
+          <th
+            class="table__number pagescores__number pagescores__rank pagescores__row-th"
+            rowspan="1"
+            scope="row"
+          >
+            7
+          </th>
+          <th
+            class="pagescores__row-th pagescores__playername"
+            data-testid="rank-7.0"
+            scope="row"
+          >
+            Joel Robinson
+          </th>
+          <td
+            class="pagescores__number pagescores__row-td table__number"
+          >
+            2
+          </td>
+          <td
+            class="pagescores__row-td table__number"
+          >
+            1
+          </td>
+          <td
+            class="pagescores__row-td table__number"
+          >
+            3
+          </td>
+          <td
+            class="pagescores__row-td table__number"
+          >
+            4
+          </td>
+          <td
+            class="pagescores__row-td table__number"
+          >
+            3
+          </td>
+        </tr>
+        <tr
+          class="pagescores__row"
+        >
+          <th
+            class="table__number pagescores__number pagescores__rank pagescores__row-th"
+            rowspan="1"
+            scope="row"
+          >
+            8
+          </th>
+          <th
+            class="pagescores__row-th pagescores__playername"
+            data-testid="rank-8.0"
+            scope="row"
+          >
+            Crow T Robot
+          </th>
+          <td
+            class="pagescores__number pagescores__row-td table__number"
+          >
+            2
+          </td>
+          <td
+            class="pagescores__row-td table__number"
+          >
+            0
+          </td>
+          <td
+            class="pagescores__row-td table__number"
+          >
+            2
+          </td>
+          <td
+            class="pagescores__row-td table__number"
+          >
+            2
+          </td>
+          <td
+            class="pagescores__row-td table__number"
+          >
+            4
+          </td>
+        </tr>
+        <tr
+          class="pagescores__row"
+        >
+          <th
+            class="table__number pagescores__number pagescores__rank pagescores__row-th"
+            rowspan="1"
+            scope="row"
+          >
+            9
+          </th>
+          <th
+            class="pagescores__row-th pagescores__playername"
+            data-testid="rank-9.0"
+            scope="row"
+          >
+            Cambot 
+          </th>
+          <td
+            class="pagescores__number pagescores__row-td table__number"
+          >
+            1
+          </td>
+          <td
+            class="pagescores__row-td table__number"
+          >
+            2
+          </td>
+          <td
+            class="pagescores__row-td table__number"
+          >
+            6
+          </td>
+          <td
+            class="pagescores__row-td table__number"
+          >
+            1
+          </td>
+          <td
+            class="pagescores__row-td table__number"
+          >
+            12
+          </td>
+        </tr>
+        <tr
+          class="pagescores__row"
+        >
+          <th
+            class="table__number pagescores__number pagescores__rank pagescores__row-th"
+            rowspan="1"
+            scope="row"
+          >
+            10
+          </th>
+          <th
+            class="pagescores__row-th pagescores__playername"
+            data-testid="rank-10.0"
+            scope="row"
+          >
+            Jonah Heston
+          </th>
+          <td
+            class="pagescores__number pagescores__row-td table__number"
+          >
+            1
+          </td>
+          <td
+            class="pagescores__row-td table__number"
+          >
+            1
+          </td>
+          <td
+            class="pagescores__row-td table__number"
+          >
+            3
+          </td>
+          <td
+            class="pagescores__row-td table__number"
+          >
+            2
+          </td>
+          <td
+            class="pagescores__row-td table__number"
+          >
+            6
+          </td>
+        </tr>
+        <tr
+          class="pagescores__row"
+        >
+          <th
+            class="table__number pagescores__number pagescores__rank pagescores__row-th"
+            rowspan="1"
+            scope="row"
+          >
+            11
+          </th>
+          <th
+            class="pagescores__row-th pagescores__playername"
+            data-testid="rank-11.0"
+            scope="row"
+          >
+            Tom Servo
+          </th>
+          <td
+            class="pagescores__number pagescores__row-td table__number"
+          >
+            1
+          </td>
+          <td
+            class="pagescores__row-td table__number"
+          >
+            0
+          </td>
+          <td
+            class="pagescores__row-td table__number"
+          >
+            4
+          </td>
+          <td
+            class="pagescores__row-td table__number"
+          >
+            0
+          </td>
+          <td
+            class="pagescores__row-td table__number"
+          >
+            9
+          </td>
+        </tr>
+        <tr
+          class="pagescores__row"
+        >
+          <th
+            class="table__number pagescores__number pagescores__rank pagescores__row-th"
+            rowspan="1"
+            scope="row"
+          >
+            12
+          </th>
+          <th
+            class="pagescores__row-th pagescores__playername"
+            data-testid="rank-12.0"
+            scope="row"
+          >
+            Pearl Forrester
+          </th>
+          <td
+            class="pagescores__number pagescores__row-td table__number"
+          >
+            0
+          </td>
+          <td
+            class="pagescores__row-td table__number"
+          >
+            2
+          </td>
+          <td
+            class="pagescores__row-td table__number"
+          >
+            7
+          </td>
+          <td
+            class="pagescores__row-td table__number"
+          >
+            0
+          </td>
+          <td
+            class="pagescores__row-td table__number"
+          >
+            10
+          </td>
+        </tr>
+        <tr
+          class="pagescores__row"
+        >
+          <th
+            class="table__number pagescores__number pagescores__rank pagescores__row-th"
+            rowspan="1"
+            scope="row"
+          >
+            13
+          </th>
+          <th
+            class="pagescores__row-th pagescores__playername"
+            data-testid="rank-13.0"
+            scope="row"
+          >
+            Kinga Forrester
+          </th>
+          <td
+            class="pagescores__number pagescores__row-td table__number"
+          >
+            0
+          </td>
+          <td
+            class="pagescores__row-td table__number"
+          >
+            2
+          </td>
+          <td
+            class="pagescores__row-td table__number"
+          >
+            6
+          </td>
+          <td
+            class="pagescores__row-td table__number"
+          >
+            0
+          </td>
+          <td
+            class="pagescores__row-td table__number"
+          >
+            10
+          </td>
+        </tr>
+      </tbody>
+    </table>
   </div>,
   "debug": [Function],
   "findAllByAltText": [Function],
@@ -435,378 +1305,734 @@ exports[`Snapshot of score table, simple pairing 1`] = `
 {
   "asFragment": [Function],
   "baseElement": <body
-    style="cursor: wait;"
+    style="cursor: auto;"
   >
     <div>
-      <div
-        class="winBody )"
+      <table
+        class="pagescores__table"
       >
-        <div
-          class="win__sidebar"
+        <caption
+          class="title-40"
         >
-          <nav>
-            <ul
-              style="margin: 0px;"
+          Simple Pairing
+        </caption>
+        <thead>
+          <tr
+            class="pagescores__topheader"
+          >
+            <th
+              class="title-10"
+              scope="col"
             >
-              <li>
-                <a
-                  aria-current="true"
-                  href="/"
-                >
-                  <svg
-                    fill="none"
-                    height="24"
-                    stroke="currentColor"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    viewBox="0 0 24 24"
-                    width="24"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"
-                    />
-                    <polyline
-                      points="9 22 9 12 15 12 15 22"
-                    />
-                  </svg>
-                  <span
-                    class="sidebar__hide-on-close"
-                  >
-                     Home
-                  </span>
-                </a>
-              </li>
-              <li>
-                <a
-                  aria-current="false"
-                  href="/tourneys"
-                >
-                  <svg
-                    fill="none"
-                    height="24"
-                    stroke="currentColor"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    viewBox="0 0 24 24"
-                    width="24"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <circle
-                      cx="12"
-                      cy="8"
-                      r="7"
-                    />
-                    <polyline
-                      points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"
-                    />
-                  </svg>
-                  <span
-                    class="sidebar__hide-on-close"
-                  >
-                     Tournaments
-                  </span>
-                </a>
-              </li>
-              <li>
-                <a
-                  aria-current="false"
-                  href="/players"
-                >
-                  <svg
-                    fill="none"
-                    height="24"
-                    stroke="currentColor"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    viewBox="0 0 24 24"
-                    width="24"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"
-                    />
-                    <circle
-                      cx="9"
-                      cy="7"
-                      r="4"
-                    />
-                    <path
-                      d="M23 21v-2a4 4 0 0 0-3-3.87"
-                    />
-                    <path
-                      d="M16 3.13a4 4 0 0 1 0 7.75"
-                    />
-                  </svg>
-                  <span
-                    class="sidebar__hide-on-close"
-                  >
-                     Players
-                  </span>
-                </a>
-              </li>
-              <li>
-                <a
-                  aria-current="false"
-                  href="/options"
-                >
-                  <svg
-                    fill="none"
-                    height="24"
-                    stroke="currentColor"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    viewBox="0 0 24 24"
-                    width="24"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <circle
-                      cx="12"
-                      cy="12"
-                      r="3"
-                    />
-                    <path
-                      d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"
-                    />
-                  </svg>
-                  <span
-                    class="sidebar__hide-on-close"
-                  >
-                     Options
-                  </span>
-                </a>
-              </li>
-              <li>
-                <a
-                  aria-current="false"
-                  href="/timecalc"
-                >
-                  <svg
-                    fill="none"
-                    height="24"
-                    stroke="currentColor"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    viewBox="0 0 24 24"
-                    width="24"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <circle
-                      cx="12"
-                      cy="12"
-                      r="10"
-                    />
-                    <polyline
-                      points="12 6 12 12 16 14"
-                    />
-                  </svg>
-                  <span
-                    class="sidebar__hide-on-close"
-                  >
-                     Time calculator
-                  </span>
-                </a>
-              </li>
-            </ul>
-          </nav>
-        </div>
-        <div
-          class="win__content"
-        >
-          Loading...
-        </div>
-      </div>
+              Rank
+            </th>
+            <th
+              class="title-10"
+              scope="col"
+            >
+              Name
+            </th>
+            <th
+              class="title-10"
+              scope="col"
+            >
+              Score
+            </th>
+            <th
+              class="title-10"
+              scope="col"
+            >
+              Modified median
+            </th>
+            <th
+              class="title-10"
+              scope="col"
+            >
+              Solkoff
+            </th>
+            <th
+              class="title-10"
+              scope="col"
+            >
+              Cumulative
+            </th>
+            <th
+              class="title-10"
+              scope="col"
+            >
+              Cumulative of opposition
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr
+            class="pagescores__row"
+          >
+            <th
+              class="table__number pagescores__number pagescores__rank pagescores__row-th"
+              rowspan="4"
+              scope="row"
+            >
+              1
+            </th>
+            <th
+              class="pagescores__row-th pagescores__playername"
+              data-testid="rank-1.0"
+              scope="row"
+            >
+              Clayton Forrester
+            </th>
+            <td
+              class="pagescores__number pagescores__row-td table__number"
+            >
+              1
+            </td>
+            <td
+              class="pagescores__row-td table__number"
+            >
+              0
+            </td>
+            <td
+              class="pagescores__row-td table__number"
+            >
+              0
+            </td>
+            <td
+              class="pagescores__row-td table__number"
+            >
+              1
+            </td>
+            <td
+              class="pagescores__row-td table__number"
+            >
+              0
+            </td>
+          </tr>
+          <tr
+            class="pagescores__row"
+          >
+            <th
+              class="pagescores__row-th pagescores__playername"
+              data-testid="rank-1.1"
+              scope="row"
+            >
+              Grandy McMaster
+            </th>
+            <td
+              class="pagescores__number pagescores__row-td table__number"
+            >
+              1
+            </td>
+            <td
+              class="pagescores__row-td table__number"
+            >
+              0
+            </td>
+            <td
+              class="pagescores__row-td table__number"
+            >
+              0
+            </td>
+            <td
+              class="pagescores__row-td table__number"
+            >
+              1
+            </td>
+            <td
+              class="pagescores__row-td table__number"
+            >
+              0
+            </td>
+          </tr>
+          <tr
+            class="pagescores__row"
+          >
+            <th
+              class="pagescores__row-th pagescores__playername"
+              data-testid="rank-1.2"
+              scope="row"
+            >
+              Gypsy 
+            </th>
+            <td
+              class="pagescores__number pagescores__row-td table__number"
+            >
+              1
+            </td>
+            <td
+              class="pagescores__row-td table__number"
+            >
+              0
+            </td>
+            <td
+              class="pagescores__row-td table__number"
+            >
+              0
+            </td>
+            <td
+              class="pagescores__row-td table__number"
+            >
+              1
+            </td>
+            <td
+              class="pagescores__row-td table__number"
+            >
+              0
+            </td>
+          </tr>
+          <tr
+            class="pagescores__row"
+          >
+            <th
+              class="pagescores__row-th pagescores__playername"
+              data-testid="rank-1.3"
+              scope="row"
+            >
+              Newbie McNewberson
+            </th>
+            <td
+              class="pagescores__number pagescores__row-td table__number"
+            >
+              1
+            </td>
+            <td
+              class="pagescores__row-td table__number"
+            >
+              0
+            </td>
+            <td
+              class="pagescores__row-td table__number"
+            >
+              0
+            </td>
+            <td
+              class="pagescores__row-td table__number"
+            >
+              1
+            </td>
+            <td
+              class="pagescores__row-td table__number"
+            >
+              0
+            </td>
+          </tr>
+          <tr
+            class="pagescores__row"
+          >
+            <th
+              class="table__number pagescores__number pagescores__rank pagescores__row-th"
+              rowspan="4"
+              scope="row"
+            >
+              2
+            </th>
+            <th
+              class="pagescores__row-th pagescores__playername"
+              data-testid="rank-2.0"
+              scope="row"
+            >
+              Crow T Robot
+            </th>
+            <td
+              class="pagescores__number pagescores__row-td table__number"
+            >
+              0
+            </td>
+            <td
+              class="pagescores__row-td table__number"
+            >
+              0
+            </td>
+            <td
+              class="pagescores__row-td table__number"
+            >
+              1
+            </td>
+            <td
+              class="pagescores__row-td table__number"
+            >
+              0
+            </td>
+            <td
+              class="pagescores__row-td table__number"
+            >
+              1
+            </td>
+          </tr>
+          <tr
+            class="pagescores__row"
+          >
+            <th
+              class="pagescores__row-th pagescores__playername"
+              data-testid="rank-2.1"
+              scope="row"
+            >
+              Joel Robinson
+            </th>
+            <td
+              class="pagescores__number pagescores__row-td table__number"
+            >
+              0
+            </td>
+            <td
+              class="pagescores__row-td table__number"
+            >
+              0
+            </td>
+            <td
+              class="pagescores__row-td table__number"
+            >
+              1
+            </td>
+            <td
+              class="pagescores__row-td table__number"
+            >
+              0
+            </td>
+            <td
+              class="pagescores__row-td table__number"
+            >
+              1
+            </td>
+          </tr>
+          <tr
+            class="pagescores__row"
+          >
+            <th
+              class="pagescores__row-th pagescores__playername"
+              data-testid="rank-2.2"
+              scope="row"
+            >
+              TV's Frank
+            </th>
+            <td
+              class="pagescores__number pagescores__row-td table__number"
+            >
+              0
+            </td>
+            <td
+              class="pagescores__row-td table__number"
+            >
+              0
+            </td>
+            <td
+              class="pagescores__row-td table__number"
+            >
+              1
+            </td>
+            <td
+              class="pagescores__row-td table__number"
+            >
+              0
+            </td>
+            <td
+              class="pagescores__row-td table__number"
+            >
+              1
+            </td>
+          </tr>
+          <tr
+            class="pagescores__row"
+          >
+            <th
+              class="pagescores__row-th pagescores__playername"
+              data-testid="rank-2.3"
+              scope="row"
+            >
+              Tom Servo
+            </th>
+            <td
+              class="pagescores__number pagescores__row-td table__number"
+            >
+              0
+            </td>
+            <td
+              class="pagescores__row-td table__number"
+            >
+              0
+            </td>
+            <td
+              class="pagescores__row-td table__number"
+            >
+              1
+            </td>
+            <td
+              class="pagescores__row-td table__number"
+            >
+              0
+            </td>
+            <td
+              class="pagescores__row-td table__number"
+            >
+              1
+            </td>
+          </tr>
+        </tbody>
+      </table>
     </div>
   </body>,
   "container": <div>
-    <div
-      class="winBody )"
+    <table
+      class="pagescores__table"
     >
-      <div
-        class="win__sidebar"
+      <caption
+        class="title-40"
       >
-        <nav>
-          <ul
-            style="margin: 0px;"
+        Simple Pairing
+      </caption>
+      <thead>
+        <tr
+          class="pagescores__topheader"
+        >
+          <th
+            class="title-10"
+            scope="col"
           >
-            <li>
-              <a
-                aria-current="true"
-                href="/"
-              >
-                <svg
-                  fill="none"
-                  height="24"
-                  stroke="currentColor"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  viewBox="0 0 24 24"
-                  width="24"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"
-                  />
-                  <polyline
-                    points="9 22 9 12 15 12 15 22"
-                  />
-                </svg>
-                <span
-                  class="sidebar__hide-on-close"
-                >
-                   Home
-                </span>
-              </a>
-            </li>
-            <li>
-              <a
-                aria-current="false"
-                href="/tourneys"
-              >
-                <svg
-                  fill="none"
-                  height="24"
-                  stroke="currentColor"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  viewBox="0 0 24 24"
-                  width="24"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <circle
-                    cx="12"
-                    cy="8"
-                    r="7"
-                  />
-                  <polyline
-                    points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"
-                  />
-                </svg>
-                <span
-                  class="sidebar__hide-on-close"
-                >
-                   Tournaments
-                </span>
-              </a>
-            </li>
-            <li>
-              <a
-                aria-current="false"
-                href="/players"
-              >
-                <svg
-                  fill="none"
-                  height="24"
-                  stroke="currentColor"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  viewBox="0 0 24 24"
-                  width="24"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"
-                  />
-                  <circle
-                    cx="9"
-                    cy="7"
-                    r="4"
-                  />
-                  <path
-                    d="M23 21v-2a4 4 0 0 0-3-3.87"
-                  />
-                  <path
-                    d="M16 3.13a4 4 0 0 1 0 7.75"
-                  />
-                </svg>
-                <span
-                  class="sidebar__hide-on-close"
-                >
-                   Players
-                </span>
-              </a>
-            </li>
-            <li>
-              <a
-                aria-current="false"
-                href="/options"
-              >
-                <svg
-                  fill="none"
-                  height="24"
-                  stroke="currentColor"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  viewBox="0 0 24 24"
-                  width="24"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <circle
-                    cx="12"
-                    cy="12"
-                    r="3"
-                  />
-                  <path
-                    d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"
-                  />
-                </svg>
-                <span
-                  class="sidebar__hide-on-close"
-                >
-                   Options
-                </span>
-              </a>
-            </li>
-            <li>
-              <a
-                aria-current="false"
-                href="/timecalc"
-              >
-                <svg
-                  fill="none"
-                  height="24"
-                  stroke="currentColor"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  viewBox="0 0 24 24"
-                  width="24"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <circle
-                    cx="12"
-                    cy="12"
-                    r="10"
-                  />
-                  <polyline
-                    points="12 6 12 12 16 14"
-                  />
-                </svg>
-                <span
-                  class="sidebar__hide-on-close"
-                >
-                   Time calculator
-                </span>
-              </a>
-            </li>
-          </ul>
-        </nav>
-      </div>
-      <div
-        class="win__content"
-      >
-        Loading...
-      </div>
-    </div>
+            Rank
+          </th>
+          <th
+            class="title-10"
+            scope="col"
+          >
+            Name
+          </th>
+          <th
+            class="title-10"
+            scope="col"
+          >
+            Score
+          </th>
+          <th
+            class="title-10"
+            scope="col"
+          >
+            Modified median
+          </th>
+          <th
+            class="title-10"
+            scope="col"
+          >
+            Solkoff
+          </th>
+          <th
+            class="title-10"
+            scope="col"
+          >
+            Cumulative
+          </th>
+          <th
+            class="title-10"
+            scope="col"
+          >
+            Cumulative of opposition
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr
+          class="pagescores__row"
+        >
+          <th
+            class="table__number pagescores__number pagescores__rank pagescores__row-th"
+            rowspan="4"
+            scope="row"
+          >
+            1
+          </th>
+          <th
+            class="pagescores__row-th pagescores__playername"
+            data-testid="rank-1.0"
+            scope="row"
+          >
+            Clayton Forrester
+          </th>
+          <td
+            class="pagescores__number pagescores__row-td table__number"
+          >
+            1
+          </td>
+          <td
+            class="pagescores__row-td table__number"
+          >
+            0
+          </td>
+          <td
+            class="pagescores__row-td table__number"
+          >
+            0
+          </td>
+          <td
+            class="pagescores__row-td table__number"
+          >
+            1
+          </td>
+          <td
+            class="pagescores__row-td table__number"
+          >
+            0
+          </td>
+        </tr>
+        <tr
+          class="pagescores__row"
+        >
+          <th
+            class="pagescores__row-th pagescores__playername"
+            data-testid="rank-1.1"
+            scope="row"
+          >
+            Grandy McMaster
+          </th>
+          <td
+            class="pagescores__number pagescores__row-td table__number"
+          >
+            1
+          </td>
+          <td
+            class="pagescores__row-td table__number"
+          >
+            0
+          </td>
+          <td
+            class="pagescores__row-td table__number"
+          >
+            0
+          </td>
+          <td
+            class="pagescores__row-td table__number"
+          >
+            1
+          </td>
+          <td
+            class="pagescores__row-td table__number"
+          >
+            0
+          </td>
+        </tr>
+        <tr
+          class="pagescores__row"
+        >
+          <th
+            class="pagescores__row-th pagescores__playername"
+            data-testid="rank-1.2"
+            scope="row"
+          >
+            Gypsy 
+          </th>
+          <td
+            class="pagescores__number pagescores__row-td table__number"
+          >
+            1
+          </td>
+          <td
+            class="pagescores__row-td table__number"
+          >
+            0
+          </td>
+          <td
+            class="pagescores__row-td table__number"
+          >
+            0
+          </td>
+          <td
+            class="pagescores__row-td table__number"
+          >
+            1
+          </td>
+          <td
+            class="pagescores__row-td table__number"
+          >
+            0
+          </td>
+        </tr>
+        <tr
+          class="pagescores__row"
+        >
+          <th
+            class="pagescores__row-th pagescores__playername"
+            data-testid="rank-1.3"
+            scope="row"
+          >
+            Newbie McNewberson
+          </th>
+          <td
+            class="pagescores__number pagescores__row-td table__number"
+          >
+            1
+          </td>
+          <td
+            class="pagescores__row-td table__number"
+          >
+            0
+          </td>
+          <td
+            class="pagescores__row-td table__number"
+          >
+            0
+          </td>
+          <td
+            class="pagescores__row-td table__number"
+          >
+            1
+          </td>
+          <td
+            class="pagescores__row-td table__number"
+          >
+            0
+          </td>
+        </tr>
+        <tr
+          class="pagescores__row"
+        >
+          <th
+            class="table__number pagescores__number pagescores__rank pagescores__row-th"
+            rowspan="4"
+            scope="row"
+          >
+            2
+          </th>
+          <th
+            class="pagescores__row-th pagescores__playername"
+            data-testid="rank-2.0"
+            scope="row"
+          >
+            Crow T Robot
+          </th>
+          <td
+            class="pagescores__number pagescores__row-td table__number"
+          >
+            0
+          </td>
+          <td
+            class="pagescores__row-td table__number"
+          >
+            0
+          </td>
+          <td
+            class="pagescores__row-td table__number"
+          >
+            1
+          </td>
+          <td
+            class="pagescores__row-td table__number"
+          >
+            0
+          </td>
+          <td
+            class="pagescores__row-td table__number"
+          >
+            1
+          </td>
+        </tr>
+        <tr
+          class="pagescores__row"
+        >
+          <th
+            class="pagescores__row-th pagescores__playername"
+            data-testid="rank-2.1"
+            scope="row"
+          >
+            Joel Robinson
+          </th>
+          <td
+            class="pagescores__number pagescores__row-td table__number"
+          >
+            0
+          </td>
+          <td
+            class="pagescores__row-td table__number"
+          >
+            0
+          </td>
+          <td
+            class="pagescores__row-td table__number"
+          >
+            1
+          </td>
+          <td
+            class="pagescores__row-td table__number"
+          >
+            0
+          </td>
+          <td
+            class="pagescores__row-td table__number"
+          >
+            1
+          </td>
+        </tr>
+        <tr
+          class="pagescores__row"
+        >
+          <th
+            class="pagescores__row-th pagescores__playername"
+            data-testid="rank-2.2"
+            scope="row"
+          >
+            TV's Frank
+          </th>
+          <td
+            class="pagescores__number pagescores__row-td table__number"
+          >
+            0
+          </td>
+          <td
+            class="pagescores__row-td table__number"
+          >
+            0
+          </td>
+          <td
+            class="pagescores__row-td table__number"
+          >
+            1
+          </td>
+          <td
+            class="pagescores__row-td table__number"
+          >
+            0
+          </td>
+          <td
+            class="pagescores__row-td table__number"
+          >
+            1
+          </td>
+        </tr>
+        <tr
+          class="pagescores__row"
+        >
+          <th
+            class="pagescores__row-th pagescores__playername"
+            data-testid="rank-2.3"
+            scope="row"
+          >
+            Tom Servo
+          </th>
+          <td
+            class="pagescores__number pagescores__row-td table__number"
+          >
+            0
+          </td>
+          <td
+            class="pagescores__row-td table__number"
+          >
+            0
+          </td>
+          <td
+            class="pagescores__row-td table__number"
+          >
+            1
+          </td>
+          <td
+            class="pagescores__row-td table__number"
+          >
+            0
+          </td>
+          <td
+            class="pagescores__row-td table__number"
+          >
+            1
+          </td>
+        </tr>
+      </tbody>
+    </table>
   </div>,
   "debug": [Function],
   "findAllByAltText": [Function],

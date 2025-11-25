@@ -1,3 +1,0 @@
-exports.extendPrototype = function () {
-  return;
-}

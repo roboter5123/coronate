@@ -28,3 +28,7 @@ module FireEvent = {
   @module("@testing-library/dom") @scope("fireEvent")
   external change: (Dom.element, Js.t<{..}>) => unit = "change"
 }
+
+@module("@testing-library/dom")
+external waitForElementToBeRemoved: (unit => Js.Null.t<Dom.element>) => Promise.t<unit> =
+  "waitForElementToBeRemoved"

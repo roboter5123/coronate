@@ -102,34 +102,36 @@ test("Players are paired correctly after a draw.", t => {
   ])
 })
 
+let renderAsync = async x => {
+  let page = render(x)
+  await waitForElementToBeRemoved(() => page->queryByText(#Str("Loading...")))
+  page
+}
+
 /* This is quick-and-dirty and fragile. */
-test("Players are paired correctly after a draw (more complex).", t => {
-  let page = render(
+testAsync("Players are paired correctly after a draw (more complex).", async t => {
+  let page = await renderAsync(
     <LoadTournament tourneyId={Data.Id.fromString("complex-bye-rounds---")} windowDispatch=None>
       {tournament => <PageRound tournament roundId=4 />}
     </LoadTournament>,
   )
-
   page->getByText(#RegExp(%re("/auto-pair unmatched players/i")))->click
-
   t->expect(page)->Expect.toMatchSnapshot
 })
 
-test("Auto-matching with bye players works", t => {
-  let page = render(
+testAsync("Auto-matching with bye players works", async t => {
+  let page = await renderAsync(
     <LoadTournament tourneyId=TestData.byeRoundTourney.id windowDispatch=None>
       {tournament => <PageRound tournament roundId=0 />}
     </LoadTournament>,
   )
-
   page->getByText(#RegExp(%re("/auto-pair unmatched players/i")))->click
-
   t->expect(page->getByTestId(#Str("match-3-black")))->toHaveTextContent(#Str("[Bye]"))
 })
 
-test("Auto-matching works with manually adjusted scores", t => {
+testAsync("Auto-matching works with manually adjusted scores", async t => {
   /* This isn't ideal but routing isn't working for tests I think. */
-  let page = render(
+  let page = await renderAsync(
     <LoadTournament tourneyId=TestData.scoreTest.id windowDispatch=None>
       {tournament => <>
         <PageTourneyPlayers tournament />
@@ -160,8 +162,8 @@ test("Auto-matching works with manually adjusted scores", t => {
 })
 
 describe("Manually pairing and byes.", () => {
-  test("Pairing players does not automatically pre-select the winner.", t => {
-    let page = render(
+  testAsync("Pairing players does not automatically pre-select the winner.", async t => {
+    let page = await renderAsync(
       <LoadTournament tourneyId=TestData.byeRoundTourney.id windowDispatch=None>
         {tournament => <PageRound tournament roundId=0 />}
       </LoadTournament>,
@@ -173,8 +175,8 @@ describe("Manually pairing and byes.", () => {
     ->toHaveValue(#Str(Data.Match.Result.toString(NotSet)))
   })
 
-  test("Pairing with a bye player automatically pre-selects the winner.", t => {
-    let page = render(
+  testAsync("Pairing with a bye player automatically pre-selects the winner.", async t => {
+    let page = await renderAsync(
       <LoadTournament tourneyId=TestData.byeRoundTourney.id windowDispatch=None>
         {tournament => <PageRound tournament roundId=0 />}
       </LoadTournament>,
@@ -186,8 +188,8 @@ describe("Manually pairing and byes.", () => {
     ->toHaveValue(#Str(Data.Match.Result.toString(BlackWon)))
   })
 
-  test("Un-pairing a bye player automatically un-pre-selects the winner.", t => {
-    let page = render(
+  testAsync("Un-pairing a bye player automatically un-pre-selects the winner.", async t => {
+    let page = await renderAsync(
       <LoadTournament tourneyId=TestData.byeRoundTourney.id windowDispatch=None>
         {tournament => <PageRound tournament roundId=0 />}
       </LoadTournament>,

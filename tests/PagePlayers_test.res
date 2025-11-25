@@ -15,18 +15,26 @@ open! Belt
 module Profile = {
   @react.component
   let make = (~id) => {
-    let {items: players, dispatch: playersDispatch, _} = Db.useAllPlayers()
+    let {items: players, dispatch: playersDispatch, loaded} = Db.useAllPlayers()
     let (config, configDispatch) = Db.useConfig()
-    switch Map.get(players, id) {
-    | Some(player) => <PagePlayers.Profile player players playersDispatch config configDispatch />
-    | None => React.null
+    switch (Map.get(players, id), loaded) {
+    | (Some(player), true) =>
+      <PagePlayers.Profile player players playersDispatch config configDispatch />
+    | (None, true) => React.null
+    | (_, false) => <div> {React.string("Loading...")} </div>
     }
   }
 }
 
+let renderAsync = async x => {
+  let page = render(x)
+  await waitForElementToBeRemoved(() => page->queryByText(#Str("Loading...")))
+  page
+}
+
 describe("The avoid form works", () => {
-  test("Adding a player to avoid works", t => {
-    let page = render(<Profile id=TestData.newbieMcNewberson.id />)
+  testAsync("Adding a player to avoid works", async t => {
+    let page = await renderAsync(<Profile id=TestData.newbieMcNewberson.id />)
     page
     ->getByLabelText(#RegExp(%re("/Select a new player to avoid/i")))
     ->change({
@@ -38,8 +46,8 @@ describe("The avoid form works", () => {
     t->expect(page->getByText(#RegExp(%re("/grandy mcmaster/i"))))->toBeInTheDocument
   })
 
-  test("Pathologic: avoiding all players works as expected.", t => {
-    let page = render(<Profile id=TestData.newbieMcNewberson.id />)
+  testAsync("Pathologic: avoiding all players works as expected.", async t => {
+    let page = await renderAsync(<Profile id=TestData.newbieMcNewberson.id />)
     for _ in 1 to TestData.players->Map.size->pred {
       page->getByText(#RegExp(%re("/^add$/i")))->click
     }
@@ -59,12 +67,16 @@ describe("The add player form works", () => {
   module Players = {
     @react.component
     let make = () => {
-      let {Db.dispatch: dispatch, _} = Db.useAllPlayers()
-      <PagePlayers.NewPlayerForm dispatch />
+      let {Db.dispatch: dispatch, loaded, _} = Db.useAllPlayers()
+      if loaded {
+        <PagePlayers.NewPlayerForm dispatch />
+      } else {
+        <div> {React.string("Loading...")} </div>
+      }
     }
   }
-  test("Changing the rating works", t => {
-    let page = render(<Players />)
+  testAsync("Changing the rating works", async t => {
+    let page = await renderAsync(<Players />)
     page
     ->getByLabelText(#RegExp(%re("/rating/i")))
     ->change({

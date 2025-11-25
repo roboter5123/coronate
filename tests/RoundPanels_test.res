@@ -10,9 +10,15 @@ open ReactTestingLibrary
 open JestDom
 open FireEvent
 
+let renderAsync = async x => {
+  let page = render(x)
+  await waitForElementToBeRemoved(() => page->queryByText(#Str("Loading...")))
+  page
+}
+
 describe("Tabs auto-change correctly.", () => {
-  test("When no players are matched, it defaults to the pair-picker", t => {
-    let page = render(
+  testAsync("When no players are matched, it defaults to the pair-picker", async t => {
+    let page = await renderAsync(
       <LoadTournament tourneyId=TestData.simplePairing.id windowDispatch=None>
         {tournament => <PageRound tournament roundId=1 />}
       </LoadTournament>,
@@ -21,8 +27,8 @@ describe("Tabs auto-change correctly.", () => {
     t->expect(selectTab)->toHaveAttribute("aria-selected", "true")
   })
 
-  test("Tab doesn't change focus if there are still players to be matched.", t => {
-    let page = render(
+  testAsync("Tab doesn't change focus if there are still players to be matched.", async t => {
+    let page = await renderAsync(
       <LoadTournament tourneyId=TestData.simplePairing.id windowDispatch=None>
         {tournament => <PageRound tournament roundId=1 />}
       </LoadTournament>,
@@ -34,8 +40,8 @@ describe("Tabs auto-change correctly.", () => {
     t->expect(selectTab)->toHaveAttribute("aria-selected", "true")
   })
 
-  test("The tab selection doesn't change if there are still matched players", t => {
-    let page = render(
+  testAsync("The tab selection doesn't change if there are still matched players", async t => {
+    let page = await renderAsync(
       <LoadTournament tourneyId=TestData.simplePairing.id windowDispatch=None>
         {tournament => <PageRound tournament roundId=1 />}
       </LoadTournament>,
@@ -53,8 +59,8 @@ describe("Tabs auto-change correctly.", () => {
     t->expect(matchesTab)->toHaveAttribute("aria-selected", "true")
   })
 
-  test("The tab selection changes when all players have been unmatched", t => {
-    let page = render(
+  testAsync("The tab selection changes when all players have been unmatched", async t => {
+    let page = await renderAsync(
       <LoadTournament tourneyId=TestData.simplePairing.id windowDispatch=None>
         {tournament => <PageRound tournament roundId=1 />}
       </LoadTournament>,
@@ -69,8 +75,8 @@ describe("Tabs auto-change correctly.", () => {
     ->toHaveAttribute("aria-selected", "false")
   })
 
-  test("The tab selection changes when all players have been paired", t => {
-    let page = render(
+  testAsync("The tab selection changes when all players have been paired", async t => {
+    let page = await renderAsync(
       <LoadTournament tourneyId=TestData.simplePairing.id windowDispatch=None>
         {tournament => <PageRound tournament roundId=1 />}
       </LoadTournament>,
@@ -82,18 +88,20 @@ describe("Tabs auto-change correctly.", () => {
   })
 })
 
-test("Matches with deleted players don't crash when edited.", t => {
-  let page = () =>
-    render(
-      <LoadTournament tourneyId=TestData.deletedPlayerTourney.id windowDispatch=None>
-        {tournament => <PageRound tournament roundId=0 />}
-      </LoadTournament>,
-    )
+testAsync("Matches with deleted players don't crash when edited.", async t => {
+  let page = await renderAsync(
+    <LoadTournament tourneyId=TestData.deletedPlayerTourney.id windowDispatch=None>
+      {tournament => <PageRound tournament roundId=0 />}
+    </LoadTournament>,
+  )
+  let f = () => {
+    page
     ->getByTestId(#Str("match-1-select"))
     ->change({
       "target": {
         "value": Data.Match.Result.toString(BlackWon),
       },
     })
-  t->expect(page)->Expect.not->Expect.toThrow
+  }
+  t->expect(f)->Expect.not->Expect.toThrow
 })

@@ -52,22 +52,32 @@ test("Ratings never go below 100", t => {
   t->expect(newRatingWhite)->Expect.toBe(100)
 })
 
-let scorePage = (~id) =>
-  <LoadTournament tourneyId=id windowDispatch=None>
-    {({tourney: {name: title, _} as tourney, getPlayer, _}) =>
-      <PageTourneyScores.ScoreTable size=Expanded tourney getPlayer title />}
-  </LoadTournament>->render
+let renderAsync = async x => {
+  let page = render(x)
+  await waitForElementToBeRemoved(() => page->queryByText(#Str("Loading...")))
+  page
+}
 
-test("Snapshot of score table, score test", t => {
-  t->expect(scorePage(~id=TestData.scoreTest.id))->Expect.toMatchSnapshot
+let scorePage = async (~id) => {
+  let page = await renderAsync(
+    <LoadTournament tourneyId=id windowDispatch=None>
+      {({tourney: {name: title, _} as tourney, getPlayer, _}) =>
+        <PageTourneyScores.ScoreTable size=Expanded tourney getPlayer title />}
+    </LoadTournament>,
+  )
+  page
+}
+
+testAsync("Snapshot of score table, score test", async t => {
+  t->expect(await scorePage(~id=TestData.scoreTest.id))->Expect.toMatchSnapshot
 })
 
-test("Snapshot of score table, simple pairing", t => {
-  t->expect(scorePage(~id=TestData.simplePairing.id))->Expect.toMatchSnapshot
+testAsync("Snapshot of score table, simple pairing", async t => {
+  t->expect(await scorePage(~id=TestData.simplePairing.id))->Expect.toMatchSnapshot
 })
 
-test("Snapshot of ranks are correct", t => {
-  let page = scorePage(~id=TestData.scoreTest.id)
+testAsync("Snapshot of ranks are correct", async t => {
+  let page = await scorePage(~id=TestData.scoreTest.id)
   t->expect(page->getByTestId(#Str("rank-1.0")))->toHaveTextContent(#Str("TV's Max"))
   t->expect(page->getByTestId(#Str("rank-2.0")))->toHaveTextContent(#Str("Bobo Professor"))
   t->expect(page->getByTestId(#Str("rank-3.0")))->toHaveTextContent(#Str("TV's Frank"))
@@ -83,9 +93,9 @@ test("Snapshot of ranks are correct", t => {
   t->expect(page->getByTestId(#Str("rank-13.0")))->toHaveTextContent(#Str("Kinga Forrester"))
 })
 
-test("Manually adjusting scores works", t => {
+testAsync("Manually adjusting scores works", async t => {
   /* This isn't ideal but routing isn't working for tests I think. */
-  let page = render(
+  let page = await renderAsync(
     <LoadTournament tourneyId=TestData.scoreTest.id windowDispatch=None>
       {tournament => <>
         <PageTourneyPlayers tournament />
@@ -105,8 +115,8 @@ test("Manually adjusting scores works", t => {
   t->expect(page->getByTestId(#Str("rank-1.0")))->toHaveTextContent(#Str("Kinga Forrester"))
 })
 
-test("Pairing players twice displays the correct history", t => {
-  let page = render(
+testAsync("Pairing players twice displays the correct history", async t => {
+  let page = await renderAsync(
     <LoadTournament tourneyId=TestData.simplePairing.id windowDispatch=None>
       {tournament => <PageRound tournament roundId=1 />}
     </LoadTournament>,

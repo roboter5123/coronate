@@ -9,8 +9,14 @@ open Vitest
 open ReactTestingLibrary
 open JestDom
 
-test("Ratings are updated correctly after a match.", t => {
-  let page = render(
+let renderAsync = async x => {
+  let page = render(x)
+  await waitForElementToBeRemoved(() => page->queryByText(#Str("Loading...")))
+  page
+}
+
+testAsync("Ratings are updated correctly after a match.", async t => {
+  let page = await renderAsync(
     <LoadTournament tourneyId=TestData.simplePairing.id windowDispatch=None>
       {tournament => <PageRound tournament roundId=1 />}
     </LoadTournament>,

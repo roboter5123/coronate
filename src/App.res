@@ -35,7 +35,4 @@ let make = () => {
   </Window>
 }
 
-/* Ensure that all LocalForage plugins get loaded. Need to be done here and in the test setup */
-LocalForage_Plugins.GetItems.extendPrototype(LocalForage.localForage)
-LocalForage_Plugins.RemoveItems.extendPrototype(LocalForage.localForage)
-LocalForage_Plugins.SetItems.extendPrototype(LocalForage.localForage)
+Db.init()

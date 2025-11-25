@@ -1,9 +1,11 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
 exports[`Players are paired correctly after a draw (more complex). 1`] = `
-Object {
+{
   "asFragment": [Function],
-  "baseElement": <body>
+  "baseElement": <body
+    style="cursor: auto;"
+  >
     <div>
       <div
         data-orientation="horizontal"
@@ -15,13 +17,13 @@ Object {
           role="tablist"
         >
           <button
-            aria-controls="tabs--1--panel--0"
+            aria-controls="tabs--panel--0"
             aria-disabled="false"
             aria-selected="true"
             data-orientation="horizontal"
             data-reach-tab=""
             data-selected=""
-            id="tabs--1--tab--0"
+            id="tabs--tab--0"
             role="tab"
             tabindex="0"
             type="button"
@@ -77,13 +79,13 @@ Object {
              Matches
           </button>
           <button
-            aria-controls="tabs--1--panel--1"
+            aria-controls="tabs--panel--1"
             aria-disabled="true"
             aria-selected="false"
             data-orientation="horizontal"
             data-reach-tab=""
             disabled=""
-            id="tabs--1--tab--1"
+            id="tabs--tab--1"
             role="tab"
             tabindex="-1"
             type="button"
@@ -121,9 +123,9 @@ Object {
           data-reach-tab-panels=""
         >
           <div
-            aria-labelledby="tabs--1--tab--0"
+            aria-labelledby="tabs--tab--0"
             data-reach-tab-panel=""
-            id="tabs--1--panel--0"
+            id="tabs--panel--0"
             role="tabpanel"
             tabindex="0"
           >
@@ -263,8 +265,16 @@ Object {
                 <caption
                   class="title-40"
                 >
-                  Round 
-                  5
+                  <div>
+                    Round 
+                    5
+                  </div>
+                  <div
+                    class="pageround__gamesinprogress__caption"
+                  >
+                    Incomplete Games: 
+                    31
+                  </div>
                 </caption>
                 <thead
                   class="pageround__table-head"
@@ -331,7 +341,7 @@ Object {
                   class="content"
                 >
                   <tr
-                    class="pageround__tr"
+                    class="pageround__tr pageround__gameinprogress }"
                   >
                     <th
                       class="pageround__row-id table__number"
@@ -393,12 +403,14 @@ Object {
                         <option
                           value="whiteWon"
                         >
-                          White won
+                          White
+                           won
                         </option>
                         <option
                           value="blackWon"
                         >
-                          Black won
+                          Black
+                           won
                         </option>
                         <option
                           value="draw"
@@ -413,12 +425,14 @@ Object {
                         <option
                           value="whiteAborted"
                         >
-                          White Aborted
+                          White
+                           Aborted
                         </option>
                         <option
                           value="blackAborted"
                         >
-                          Black Aborted
+                          Black
+                           Aborted
                         </option>
                       </select>
                     </td>
@@ -494,7 +508,7 @@ Object {
                     </td>
                   </tr>
                   <tr
-                    class="pageround__tr"
+                    class="pageround__tr pageround__gameinprogress }"
                   >
                     <th
                       class="pageround__row-id table__number"
@@ -556,12 +570,14 @@ Object {
                         <option
                           value="whiteWon"
                         >
-                          White won
+                          White
+                           won
                         </option>
                         <option
                           value="blackWon"
                         >
-                          Black won
+                          Black
+                           won
                         </option>
                         <option
                           value="draw"
@@ -576,12 +592,14 @@ Object {
                         <option
                           value="whiteAborted"
                         >
-                          White Aborted
+                          White
+                           Aborted
                         </option>
                         <option
                           value="blackAborted"
                         >
-                          Black Aborted
+                          Black
+                           Aborted
                         </option>
                       </select>
                     </td>
@@ -657,7 +675,7 @@ Object {
                     </td>
                   </tr>
                   <tr
-                    class="pageround__tr"
+                    class="pageround__tr pageround__gameinprogress }"
                   >
                     <th
                       class="pageround__row-id table__number"
@@ -719,12 +737,14 @@ Object {
                         <option
                           value="whiteWon"
                         >
-                          White won
+                          White
+                           won
                         </option>
                         <option
                           value="blackWon"
                         >
-                          Black won
+                          Black
+                           won
                         </option>
                         <option
                           value="draw"
@@ -739,12 +759,14 @@ Object {
                         <option
                           value="whiteAborted"
                         >
-                          White Aborted
+                          White
+                           Aborted
                         </option>
                         <option
                           value="blackAborted"
                         >
-                          Black Aborted
+                          Black
+                           Aborted
                         </option>
                       </select>
                     </td>
@@ -820,7 +842,7 @@ Object {
                     </td>
                   </tr>
                   <tr
-                    class="pageround__tr"
+                    class="pageround__tr pageround__gameinprogress }"
                   >
                     <th
                       class="pageround__row-id table__number"
@@ -882,12 +904,14 @@ Object {
                         <option
                           value="whiteWon"
                         >
-                          White won
+                          White
+                           won
                         </option>
                         <option
                           value="blackWon"
                         >
-                          Black won
+                          Black
+                           won
                         </option>
                         <option
                           value="draw"
@@ -902,12 +926,14 @@ Object {
                         <option
                           value="whiteAborted"
                         >
-                          White Aborted
+                          White
+                           Aborted
                         </option>
                         <option
                           value="blackAborted"
                         >
-                          Black Aborted
+                          Black
+                           Aborted
                         </option>
                       </select>
                     </td>
@@ -983,7 +1009,7 @@ Object {
                     </td>
                   </tr>
                   <tr
-                    class="pageround__tr"
+                    class="pageround__tr pageround__gameinprogress }"
                   >
                     <th
                       class="pageround__row-id table__number"
@@ -1045,12 +1071,14 @@ Object {
                         <option
                           value="whiteWon"
                         >
-                          White won
+                          White
+                           won
                         </option>
                         <option
                           value="blackWon"
                         >
-                          Black won
+                          Black
+                           won
                         </option>
                         <option
                           value="draw"
@@ -1065,12 +1093,14 @@ Object {
                         <option
                           value="whiteAborted"
                         >
-                          White Aborted
+                          White
+                           Aborted
                         </option>
                         <option
                           value="blackAborted"
                         >
-                          Black Aborted
+                          Black
+                           Aborted
                         </option>
                       </select>
                     </td>
@@ -1146,7 +1176,7 @@ Object {
                     </td>
                   </tr>
                   <tr
-                    class="pageround__tr"
+                    class="pageround__tr pageround__gameinprogress }"
                   >
                     <th
                       class="pageround__row-id table__number"
@@ -1208,12 +1238,14 @@ Object {
                         <option
                           value="whiteWon"
                         >
-                          White won
+                          White
+                           won
                         </option>
                         <option
                           value="blackWon"
                         >
-                          Black won
+                          Black
+                           won
                         </option>
                         <option
                           value="draw"
@@ -1228,12 +1260,14 @@ Object {
                         <option
                           value="whiteAborted"
                         >
-                          White Aborted
+                          White
+                           Aborted
                         </option>
                         <option
                           value="blackAborted"
                         >
-                          Black Aborted
+                          Black
+                           Aborted
                         </option>
                       </select>
                     </td>
@@ -1309,7 +1343,7 @@ Object {
                     </td>
                   </tr>
                   <tr
-                    class="pageround__tr"
+                    class="pageround__tr pageround__gameinprogress }"
                   >
                     <th
                       class="pageround__row-id table__number"
@@ -1371,12 +1405,14 @@ Object {
                         <option
                           value="whiteWon"
                         >
-                          White won
+                          White
+                           won
                         </option>
                         <option
                           value="blackWon"
                         >
-                          Black won
+                          Black
+                           won
                         </option>
                         <option
                           value="draw"
@@ -1391,12 +1427,14 @@ Object {
                         <option
                           value="whiteAborted"
                         >
-                          White Aborted
+                          White
+                           Aborted
                         </option>
                         <option
                           value="blackAborted"
                         >
-                          Black Aborted
+                          Black
+                           Aborted
                         </option>
                       </select>
                     </td>
@@ -1472,7 +1510,7 @@ Object {
                     </td>
                   </tr>
                   <tr
-                    class="pageround__tr"
+                    class="pageround__tr pageround__gameinprogress }"
                   >
                     <th
                       class="pageround__row-id table__number"
@@ -1534,12 +1572,14 @@ Object {
                         <option
                           value="whiteWon"
                         >
-                          White won
+                          White
+                           won
                         </option>
                         <option
                           value="blackWon"
                         >
-                          Black won
+                          Black
+                           won
                         </option>
                         <option
                           value="draw"
@@ -1554,12 +1594,14 @@ Object {
                         <option
                           value="whiteAborted"
                         >
-                          White Aborted
+                          White
+                           Aborted
                         </option>
                         <option
                           value="blackAborted"
                         >
-                          Black Aborted
+                          Black
+                           Aborted
                         </option>
                       </select>
                     </td>
@@ -1635,7 +1677,7 @@ Object {
                     </td>
                   </tr>
                   <tr
-                    class="pageround__tr"
+                    class="pageround__tr pageround__gameinprogress }"
                   >
                     <th
                       class="pageround__row-id table__number"
@@ -1697,12 +1739,14 @@ Object {
                         <option
                           value="whiteWon"
                         >
-                          White won
+                          White
+                           won
                         </option>
                         <option
                           value="blackWon"
                         >
-                          Black won
+                          Black
+                           won
                         </option>
                         <option
                           value="draw"
@@ -1717,12 +1761,14 @@ Object {
                         <option
                           value="whiteAborted"
                         >
-                          White Aborted
+                          White
+                           Aborted
                         </option>
                         <option
                           value="blackAborted"
                         >
-                          Black Aborted
+                          Black
+                           Aborted
                         </option>
                       </select>
                     </td>
@@ -1798,7 +1844,7 @@ Object {
                     </td>
                   </tr>
                   <tr
-                    class="pageround__tr"
+                    class="pageround__tr pageround__gameinprogress }"
                   >
                     <th
                       class="pageround__row-id table__number"
@@ -1860,12 +1906,14 @@ Object {
                         <option
                           value="whiteWon"
                         >
-                          White won
+                          White
+                           won
                         </option>
                         <option
                           value="blackWon"
                         >
-                          Black won
+                          Black
+                           won
                         </option>
                         <option
                           value="draw"
@@ -1880,12 +1928,14 @@ Object {
                         <option
                           value="whiteAborted"
                         >
-                          White Aborted
+                          White
+                           Aborted
                         </option>
                         <option
                           value="blackAborted"
                         >
-                          Black Aborted
+                          Black
+                           Aborted
                         </option>
                       </select>
                     </td>
@@ -1961,7 +2011,7 @@ Object {
                     </td>
                   </tr>
                   <tr
-                    class="pageround__tr"
+                    class="pageround__tr pageround__gameinprogress }"
                   >
                     <th
                       class="pageround__row-id table__number"
@@ -2023,12 +2073,14 @@ Object {
                         <option
                           value="whiteWon"
                         >
-                          White won
+                          White
+                           won
                         </option>
                         <option
                           value="blackWon"
                         >
-                          Black won
+                          Black
+                           won
                         </option>
                         <option
                           value="draw"
@@ -2043,12 +2095,14 @@ Object {
                         <option
                           value="whiteAborted"
                         >
-                          White Aborted
+                          White
+                           Aborted
                         </option>
                         <option
                           value="blackAborted"
                         >
-                          Black Aborted
+                          Black
+                           Aborted
                         </option>
                       </select>
                     </td>
@@ -2124,7 +2178,7 @@ Object {
                     </td>
                   </tr>
                   <tr
-                    class="pageround__tr"
+                    class="pageround__tr pageround__gameinprogress }"
                   >
                     <th
                       class="pageround__row-id table__number"
@@ -2186,12 +2240,14 @@ Object {
                         <option
                           value="whiteWon"
                         >
-                          White won
+                          White
+                           won
                         </option>
                         <option
                           value="blackWon"
                         >
-                          Black won
+                          Black
+                           won
                         </option>
                         <option
                           value="draw"
@@ -2206,12 +2262,14 @@ Object {
                         <option
                           value="whiteAborted"
                         >
-                          White Aborted
+                          White
+                           Aborted
                         </option>
                         <option
                           value="blackAborted"
                         >
-                          Black Aborted
+                          Black
+                           Aborted
                         </option>
                       </select>
                     </td>
@@ -2287,7 +2345,7 @@ Object {
                     </td>
                   </tr>
                   <tr
-                    class="pageround__tr"
+                    class="pageround__tr pageround__gameinprogress }"
                   >
                     <th
                       class="pageround__row-id table__number"
@@ -2349,12 +2407,14 @@ Object {
                         <option
                           value="whiteWon"
                         >
-                          White won
+                          White
+                           won
                         </option>
                         <option
                           value="blackWon"
                         >
-                          Black won
+                          Black
+                           won
                         </option>
                         <option
                           value="draw"
@@ -2369,12 +2429,14 @@ Object {
                         <option
                           value="whiteAborted"
                         >
-                          White Aborted
+                          White
+                           Aborted
                         </option>
                         <option
                           value="blackAborted"
                         >
-                          Black Aborted
+                          Black
+                           Aborted
                         </option>
                       </select>
                     </td>
@@ -2450,7 +2512,7 @@ Object {
                     </td>
                   </tr>
                   <tr
-                    class="pageround__tr"
+                    class="pageround__tr pageround__gameinprogress }"
                   >
                     <th
                       class="pageround__row-id table__number"
@@ -2512,12 +2574,14 @@ Object {
                         <option
                           value="whiteWon"
                         >
-                          White won
+                          White
+                           won
                         </option>
                         <option
                           value="blackWon"
                         >
-                          Black won
+                          Black
+                           won
                         </option>
                         <option
                           value="draw"
@@ -2532,12 +2596,14 @@ Object {
                         <option
                           value="whiteAborted"
                         >
-                          White Aborted
+                          White
+                           Aborted
                         </option>
                         <option
                           value="blackAborted"
                         >
-                          Black Aborted
+                          Black
+                           Aborted
                         </option>
                       </select>
                     </td>
@@ -2613,7 +2679,7 @@ Object {
                     </td>
                   </tr>
                   <tr
-                    class="pageround__tr"
+                    class="pageround__tr pageround__gameinprogress }"
                   >
                     <th
                       class="pageround__row-id table__number"
@@ -2675,12 +2741,14 @@ Object {
                         <option
                           value="whiteWon"
                         >
-                          White won
+                          White
+                           won
                         </option>
                         <option
                           value="blackWon"
                         >
-                          Black won
+                          Black
+                           won
                         </option>
                         <option
                           value="draw"
@@ -2695,12 +2763,14 @@ Object {
                         <option
                           value="whiteAborted"
                         >
-                          White Aborted
+                          White
+                           Aborted
                         </option>
                         <option
                           value="blackAborted"
                         >
-                          Black Aborted
+                          Black
+                           Aborted
                         </option>
                       </select>
                     </td>
@@ -2776,7 +2846,7 @@ Object {
                     </td>
                   </tr>
                   <tr
-                    class="pageround__tr"
+                    class="pageround__tr pageround__gameinprogress }"
                   >
                     <th
                       class="pageround__row-id table__number"
@@ -2838,12 +2908,14 @@ Object {
                         <option
                           value="whiteWon"
                         >
-                          White won
+                          White
+                           won
                         </option>
                         <option
                           value="blackWon"
                         >
-                          Black won
+                          Black
+                           won
                         </option>
                         <option
                           value="draw"
@@ -2858,12 +2930,14 @@ Object {
                         <option
                           value="whiteAborted"
                         >
-                          White Aborted
+                          White
+                           Aborted
                         </option>
                         <option
                           value="blackAborted"
                         >
-                          Black Aborted
+                          Black
+                           Aborted
                         </option>
                       </select>
                     </td>
@@ -2939,7 +3013,7 @@ Object {
                     </td>
                   </tr>
                   <tr
-                    class="pageround__tr"
+                    class="pageround__tr pageround__gameinprogress }"
                   >
                     <th
                       class="pageround__row-id table__number"
@@ -3001,12 +3075,14 @@ Object {
                         <option
                           value="whiteWon"
                         >
-                          White won
+                          White
+                           won
                         </option>
                         <option
                           value="blackWon"
                         >
-                          Black won
+                          Black
+                           won
                         </option>
                         <option
                           value="draw"
@@ -3021,12 +3097,14 @@ Object {
                         <option
                           value="whiteAborted"
                         >
-                          White Aborted
+                          White
+                           Aborted
                         </option>
                         <option
                           value="blackAborted"
                         >
-                          Black Aborted
+                          Black
+                           Aborted
                         </option>
                       </select>
                     </td>
@@ -3102,7 +3180,7 @@ Object {
                     </td>
                   </tr>
                   <tr
-                    class="pageround__tr"
+                    class="pageround__tr pageround__gameinprogress }"
                   >
                     <th
                       class="pageround__row-id table__number"
@@ -3164,12 +3242,14 @@ Object {
                         <option
                           value="whiteWon"
                         >
-                          White won
+                          White
+                           won
                         </option>
                         <option
                           value="blackWon"
                         >
-                          Black won
+                          Black
+                           won
                         </option>
                         <option
                           value="draw"
@@ -3184,12 +3264,14 @@ Object {
                         <option
                           value="whiteAborted"
                         >
-                          White Aborted
+                          White
+                           Aborted
                         </option>
                         <option
                           value="blackAborted"
                         >
-                          Black Aborted
+                          Black
+                           Aborted
                         </option>
                       </select>
                     </td>
@@ -3265,7 +3347,7 @@ Object {
                     </td>
                   </tr>
                   <tr
-                    class="pageround__tr"
+                    class="pageround__tr pageround__gameinprogress }"
                   >
                     <th
                       class="pageround__row-id table__number"
@@ -3327,12 +3409,14 @@ Object {
                         <option
                           value="whiteWon"
                         >
-                          White won
+                          White
+                           won
                         </option>
                         <option
                           value="blackWon"
                         >
-                          Black won
+                          Black
+                           won
                         </option>
                         <option
                           value="draw"
@@ -3347,12 +3431,14 @@ Object {
                         <option
                           value="whiteAborted"
                         >
-                          White Aborted
+                          White
+                           Aborted
                         </option>
                         <option
                           value="blackAborted"
                         >
-                          Black Aborted
+                          Black
+                           Aborted
                         </option>
                       </select>
                     </td>
@@ -3428,7 +3514,7 @@ Object {
                     </td>
                   </tr>
                   <tr
-                    class="pageround__tr"
+                    class="pageround__tr pageround__gameinprogress }"
                   >
                     <th
                       class="pageround__row-id table__number"
@@ -3490,12 +3576,14 @@ Object {
                         <option
                           value="whiteWon"
                         >
-                          White won
+                          White
+                           won
                         </option>
                         <option
                           value="blackWon"
                         >
-                          Black won
+                          Black
+                           won
                         </option>
                         <option
                           value="draw"
@@ -3510,12 +3598,14 @@ Object {
                         <option
                           value="whiteAborted"
                         >
-                          White Aborted
+                          White
+                           Aborted
                         </option>
                         <option
                           value="blackAborted"
                         >
-                          Black Aborted
+                          Black
+                           Aborted
                         </option>
                       </select>
                     </td>
@@ -3591,7 +3681,7 @@ Object {
                     </td>
                   </tr>
                   <tr
-                    class="pageround__tr"
+                    class="pageround__tr pageround__gameinprogress }"
                   >
                     <th
                       class="pageround__row-id table__number"
@@ -3653,12 +3743,14 @@ Object {
                         <option
                           value="whiteWon"
                         >
-                          White won
+                          White
+                           won
                         </option>
                         <option
                           value="blackWon"
                         >
-                          Black won
+                          Black
+                           won
                         </option>
                         <option
                           value="draw"
@@ -3673,12 +3765,14 @@ Object {
                         <option
                           value="whiteAborted"
                         >
-                          White Aborted
+                          White
+                           Aborted
                         </option>
                         <option
                           value="blackAborted"
                         >
-                          Black Aborted
+                          Black
+                           Aborted
                         </option>
                       </select>
                     </td>
@@ -3754,7 +3848,7 @@ Object {
                     </td>
                   </tr>
                   <tr
-                    class="pageround__tr"
+                    class="pageround__tr pageround__gameinprogress }"
                   >
                     <th
                       class="pageround__row-id table__number"
@@ -3816,12 +3910,14 @@ Object {
                         <option
                           value="whiteWon"
                         >
-                          White won
+                          White
+                           won
                         </option>
                         <option
                           value="blackWon"
                         >
-                          Black won
+                          Black
+                           won
                         </option>
                         <option
                           value="draw"
@@ -3836,12 +3932,14 @@ Object {
                         <option
                           value="whiteAborted"
                         >
-                          White Aborted
+                          White
+                           Aborted
                         </option>
                         <option
                           value="blackAborted"
                         >
-                          Black Aborted
+                          Black
+                           Aborted
                         </option>
                       </select>
                     </td>
@@ -3917,7 +4015,7 @@ Object {
                     </td>
                   </tr>
                   <tr
-                    class="pageround__tr"
+                    class="pageround__tr pageround__gameinprogress }"
                   >
                     <th
                       class="pageround__row-id table__number"
@@ -3979,12 +4077,14 @@ Object {
                         <option
                           value="whiteWon"
                         >
-                          White won
+                          White
+                           won
                         </option>
                         <option
                           value="blackWon"
                         >
-                          Black won
+                          Black
+                           won
                         </option>
                         <option
                           value="draw"
@@ -3999,12 +4099,14 @@ Object {
                         <option
                           value="whiteAborted"
                         >
-                          White Aborted
+                          White
+                           Aborted
                         </option>
                         <option
                           value="blackAborted"
                         >
-                          Black Aborted
+                          Black
+                           Aborted
                         </option>
                       </select>
                     </td>
@@ -4080,7 +4182,7 @@ Object {
                     </td>
                   </tr>
                   <tr
-                    class="pageround__tr"
+                    class="pageround__tr pageround__gameinprogress }"
                   >
                     <th
                       class="pageround__row-id table__number"
@@ -4142,12 +4244,14 @@ Object {
                         <option
                           value="whiteWon"
                         >
-                          White won
+                          White
+                           won
                         </option>
                         <option
                           value="blackWon"
                         >
-                          Black won
+                          Black
+                           won
                         </option>
                         <option
                           value="draw"
@@ -4162,12 +4266,14 @@ Object {
                         <option
                           value="whiteAborted"
                         >
-                          White Aborted
+                          White
+                           Aborted
                         </option>
                         <option
                           value="blackAborted"
                         >
-                          Black Aborted
+                          Black
+                           Aborted
                         </option>
                       </select>
                     </td>
@@ -4243,7 +4349,7 @@ Object {
                     </td>
                   </tr>
                   <tr
-                    class="pageround__tr"
+                    class="pageround__tr pageround__gameinprogress }"
                   >
                     <th
                       class="pageround__row-id table__number"
@@ -4305,12 +4411,14 @@ Object {
                         <option
                           value="whiteWon"
                         >
-                          White won
+                          White
+                           won
                         </option>
                         <option
                           value="blackWon"
                         >
-                          Black won
+                          Black
+                           won
                         </option>
                         <option
                           value="draw"
@@ -4325,12 +4433,14 @@ Object {
                         <option
                           value="whiteAborted"
                         >
-                          White Aborted
+                          White
+                           Aborted
                         </option>
                         <option
                           value="blackAborted"
                         >
-                          Black Aborted
+                          Black
+                           Aborted
                         </option>
                       </select>
                     </td>
@@ -4406,7 +4516,7 @@ Object {
                     </td>
                   </tr>
                   <tr
-                    class="pageround__tr"
+                    class="pageround__tr pageround__gameinprogress }"
                   >
                     <th
                       class="pageround__row-id table__number"
@@ -4468,12 +4578,14 @@ Object {
                         <option
                           value="whiteWon"
                         >
-                          White won
+                          White
+                           won
                         </option>
                         <option
                           value="blackWon"
                         >
-                          Black won
+                          Black
+                           won
                         </option>
                         <option
                           value="draw"
@@ -4488,12 +4600,14 @@ Object {
                         <option
                           value="whiteAborted"
                         >
-                          White Aborted
+                          White
+                           Aborted
                         </option>
                         <option
                           value="blackAborted"
                         >
-                          Black Aborted
+                          Black
+                           Aborted
                         </option>
                       </select>
                     </td>
@@ -4569,7 +4683,7 @@ Object {
                     </td>
                   </tr>
                   <tr
-                    class="pageround__tr"
+                    class="pageround__tr pageround__gameinprogress }"
                   >
                     <th
                       class="pageround__row-id table__number"
@@ -4631,12 +4745,14 @@ Object {
                         <option
                           value="whiteWon"
                         >
-                          White won
+                          White
+                           won
                         </option>
                         <option
                           value="blackWon"
                         >
-                          Black won
+                          Black
+                           won
                         </option>
                         <option
                           value="draw"
@@ -4651,12 +4767,14 @@ Object {
                         <option
                           value="whiteAborted"
                         >
-                          White Aborted
+                          White
+                           Aborted
                         </option>
                         <option
                           value="blackAborted"
                         >
-                          Black Aborted
+                          Black
+                           Aborted
                         </option>
                       </select>
                     </td>
@@ -4732,7 +4850,7 @@ Object {
                     </td>
                   </tr>
                   <tr
-                    class="pageround__tr"
+                    class="pageround__tr pageround__gameinprogress }"
                   >
                     <th
                       class="pageround__row-id table__number"
@@ -4794,12 +4912,14 @@ Object {
                         <option
                           value="whiteWon"
                         >
-                          White won
+                          White
+                           won
                         </option>
                         <option
                           value="blackWon"
                         >
-                          Black won
+                          Black
+                           won
                         </option>
                         <option
                           value="draw"
@@ -4814,12 +4934,14 @@ Object {
                         <option
                           value="whiteAborted"
                         >
-                          White Aborted
+                          White
+                           Aborted
                         </option>
                         <option
                           value="blackAborted"
                         >
-                          Black Aborted
+                          Black
+                           Aborted
                         </option>
                       </select>
                     </td>
@@ -4895,7 +5017,7 @@ Object {
                     </td>
                   </tr>
                   <tr
-                    class="pageround__tr"
+                    class="pageround__tr pageround__gameinprogress }"
                   >
                     <th
                       class="pageround__row-id table__number"
@@ -4957,12 +5079,14 @@ Object {
                         <option
                           value="whiteWon"
                         >
-                          White won
+                          White
+                           won
                         </option>
                         <option
                           value="blackWon"
                         >
-                          Black won
+                          Black
+                           won
                         </option>
                         <option
                           value="draw"
@@ -4977,12 +5101,14 @@ Object {
                         <option
                           value="whiteAborted"
                         >
-                          White Aborted
+                          White
+                           Aborted
                         </option>
                         <option
                           value="blackAborted"
                         >
-                          Black Aborted
+                          Black
+                           Aborted
                         </option>
                       </select>
                     </td>
@@ -5058,7 +5184,7 @@ Object {
                     </td>
                   </tr>
                   <tr
-                    class="pageround__tr"
+                    class="pageround__tr pageround__gameinprogress }"
                   >
                     <th
                       class="pageround__row-id table__number"
@@ -5120,12 +5246,14 @@ Object {
                         <option
                           value="whiteWon"
                         >
-                          White won
+                          White
+                           won
                         </option>
                         <option
                           value="blackWon"
                         >
-                          Black won
+                          Black
+                           won
                         </option>
                         <option
                           value="draw"
@@ -5140,12 +5268,14 @@ Object {
                         <option
                           value="whiteAborted"
                         >
-                          White Aborted
+                          White
+                           Aborted
                         </option>
                         <option
                           value="blackAborted"
                         >
-                          Black Aborted
+                          Black
+                           Aborted
                         </option>
                       </select>
                     </td>
@@ -5221,7 +5351,7 @@ Object {
                     </td>
                   </tr>
                   <tr
-                    class="pageround__tr"
+                    class="pageround__tr pageround__gameinprogress }"
                   >
                     <th
                       class="pageround__row-id table__number"
@@ -5283,12 +5413,14 @@ Object {
                         <option
                           value="whiteWon"
                         >
-                          White won
+                          White
+                           won
                         </option>
                         <option
                           value="blackWon"
                         >
-                          Black won
+                          Black
+                           won
                         </option>
                         <option
                           value="draw"
@@ -5303,12 +5435,14 @@ Object {
                         <option
                           value="whiteAborted"
                         >
-                          White Aborted
+                          White
+                           Aborted
                         </option>
                         <option
                           value="blackAborted"
                         >
-                          Black Aborted
+                          Black
+                           Aborted
                         </option>
                       </select>
                     </td>
@@ -5388,10 +5522,10 @@ Object {
             </div>
           </div>
           <div
-            aria-labelledby="tabs--1--tab--1"
+            aria-labelledby="tabs--tab--1"
             data-reach-tab-panel=""
             hidden=""
-            id="tabs--1--panel--1"
+            id="tabs--panel--1"
             role="tabpanel"
             tabindex="-1"
           >
@@ -5412,13 +5546,13 @@ Object {
         role="tablist"
       >
         <button
-          aria-controls="tabs--1--panel--0"
+          aria-controls="tabs--panel--0"
           aria-disabled="false"
           aria-selected="true"
           data-orientation="horizontal"
           data-reach-tab=""
           data-selected=""
-          id="tabs--1--tab--0"
+          id="tabs--tab--0"
           role="tab"
           tabindex="0"
           type="button"
@@ -5474,13 +5608,13 @@ Object {
            Matches
         </button>
         <button
-          aria-controls="tabs--1--panel--1"
+          aria-controls="tabs--panel--1"
           aria-disabled="true"
           aria-selected="false"
           data-orientation="horizontal"
           data-reach-tab=""
           disabled=""
-          id="tabs--1--tab--1"
+          id="tabs--tab--1"
           role="tab"
           tabindex="-1"
           type="button"
@@ -5518,9 +5652,9 @@ Object {
         data-reach-tab-panels=""
       >
         <div
-          aria-labelledby="tabs--1--tab--0"
+          aria-labelledby="tabs--tab--0"
           data-reach-tab-panel=""
-          id="tabs--1--panel--0"
+          id="tabs--panel--0"
           role="tabpanel"
           tabindex="0"
         >
@@ -5660,8 +5794,16 @@ Object {
               <caption
                 class="title-40"
               >
-                Round 
-                5
+                <div>
+                  Round 
+                  5
+                </div>
+                <div
+                  class="pageround__gamesinprogress__caption"
+                >
+                  Incomplete Games: 
+                  31
+                </div>
               </caption>
               <thead
                 class="pageround__table-head"
@@ -5728,7 +5870,7 @@ Object {
                 class="content"
               >
                 <tr
-                  class="pageround__tr"
+                  class="pageround__tr pageround__gameinprogress }"
                 >
                   <th
                     class="pageround__row-id table__number"
@@ -5790,12 +5932,14 @@ Object {
                       <option
                         value="whiteWon"
                       >
-                        White won
+                        White
+                         won
                       </option>
                       <option
                         value="blackWon"
                       >
-                        Black won
+                        Black
+                         won
                       </option>
                       <option
                         value="draw"
@@ -5810,12 +5954,14 @@ Object {
                       <option
                         value="whiteAborted"
                       >
-                        White Aborted
+                        White
+                         Aborted
                       </option>
                       <option
                         value="blackAborted"
                       >
-                        Black Aborted
+                        Black
+                         Aborted
                       </option>
                     </select>
                   </td>
@@ -5891,7 +6037,7 @@ Object {
                   </td>
                 </tr>
                 <tr
-                  class="pageround__tr"
+                  class="pageround__tr pageround__gameinprogress }"
                 >
                   <th
                     class="pageround__row-id table__number"
@@ -5953,12 +6099,14 @@ Object {
                       <option
                         value="whiteWon"
                       >
-                        White won
+                        White
+                         won
                       </option>
                       <option
                         value="blackWon"
                       >
-                        Black won
+                        Black
+                         won
                       </option>
                       <option
                         value="draw"
@@ -5973,12 +6121,14 @@ Object {
                       <option
                         value="whiteAborted"
                       >
-                        White Aborted
+                        White
+                         Aborted
                       </option>
                       <option
                         value="blackAborted"
                       >
-                        Black Aborted
+                        Black
+                         Aborted
                       </option>
                     </select>
                   </td>
@@ -6054,7 +6204,7 @@ Object {
                   </td>
                 </tr>
                 <tr
-                  class="pageround__tr"
+                  class="pageround__tr pageround__gameinprogress }"
                 >
                   <th
                     class="pageround__row-id table__number"
@@ -6116,12 +6266,14 @@ Object {
                       <option
                         value="whiteWon"
                       >
-                        White won
+                        White
+                         won
                       </option>
                       <option
                         value="blackWon"
                       >
-                        Black won
+                        Black
+                         won
                       </option>
                       <option
                         value="draw"
@@ -6136,12 +6288,14 @@ Object {
                       <option
                         value="whiteAborted"
                       >
-                        White Aborted
+                        White
+                         Aborted
                       </option>
                       <option
                         value="blackAborted"
                       >
-                        Black Aborted
+                        Black
+                         Aborted
                       </option>
                     </select>
                   </td>
@@ -6217,7 +6371,7 @@ Object {
                   </td>
                 </tr>
                 <tr
-                  class="pageround__tr"
+                  class="pageround__tr pageround__gameinprogress }"
                 >
                   <th
                     class="pageround__row-id table__number"
@@ -6279,12 +6433,14 @@ Object {
                       <option
                         value="whiteWon"
                       >
-                        White won
+                        White
+                         won
                       </option>
                       <option
                         value="blackWon"
                       >
-                        Black won
+                        Black
+                         won
                       </option>
                       <option
                         value="draw"
@@ -6299,12 +6455,14 @@ Object {
                       <option
                         value="whiteAborted"
                       >
-                        White Aborted
+                        White
+                         Aborted
                       </option>
                       <option
                         value="blackAborted"
                       >
-                        Black Aborted
+                        Black
+                         Aborted
                       </option>
                     </select>
                   </td>
@@ -6380,7 +6538,7 @@ Object {
                   </td>
                 </tr>
                 <tr
-                  class="pageround__tr"
+                  class="pageround__tr pageround__gameinprogress }"
                 >
                   <th
                     class="pageround__row-id table__number"
@@ -6442,12 +6600,14 @@ Object {
                       <option
                         value="whiteWon"
                       >
-                        White won
+                        White
+                         won
                       </option>
                       <option
                         value="blackWon"
                       >
-                        Black won
+                        Black
+                         won
                       </option>
                       <option
                         value="draw"
@@ -6462,12 +6622,14 @@ Object {
                       <option
                         value="whiteAborted"
                       >
-                        White Aborted
+                        White
+                         Aborted
                       </option>
                       <option
                         value="blackAborted"
                       >
-                        Black Aborted
+                        Black
+                         Aborted
                       </option>
                     </select>
                   </td>
@@ -6543,7 +6705,7 @@ Object {
                   </td>
                 </tr>
                 <tr
-                  class="pageround__tr"
+                  class="pageround__tr pageround__gameinprogress }"
                 >
                   <th
                     class="pageround__row-id table__number"
@@ -6605,12 +6767,14 @@ Object {
                       <option
                         value="whiteWon"
                       >
-                        White won
+                        White
+                         won
                       </option>
                       <option
                         value="blackWon"
                       >
-                        Black won
+                        Black
+                         won
                       </option>
                       <option
                         value="draw"
@@ -6625,12 +6789,14 @@ Object {
                       <option
                         value="whiteAborted"
                       >
-                        White Aborted
+                        White
+                         Aborted
                       </option>
                       <option
                         value="blackAborted"
                       >
-                        Black Aborted
+                        Black
+                         Aborted
                       </option>
                     </select>
                   </td>
@@ -6706,7 +6872,7 @@ Object {
                   </td>
                 </tr>
                 <tr
-                  class="pageround__tr"
+                  class="pageround__tr pageround__gameinprogress }"
                 >
                   <th
                     class="pageround__row-id table__number"
@@ -6768,12 +6934,14 @@ Object {
                       <option
                         value="whiteWon"
                       >
-                        White won
+                        White
+                         won
                       </option>
                       <option
                         value="blackWon"
                       >
-                        Black won
+                        Black
+                         won
                       </option>
                       <option
                         value="draw"
@@ -6788,12 +6956,14 @@ Object {
                       <option
                         value="whiteAborted"
                       >
-                        White Aborted
+                        White
+                         Aborted
                       </option>
                       <option
                         value="blackAborted"
                       >
-                        Black Aborted
+                        Black
+                         Aborted
                       </option>
                     </select>
                   </td>
@@ -6869,7 +7039,7 @@ Object {
                   </td>
                 </tr>
                 <tr
-                  class="pageround__tr"
+                  class="pageround__tr pageround__gameinprogress }"
                 >
                   <th
                     class="pageround__row-id table__number"
@@ -6931,12 +7101,14 @@ Object {
                       <option
                         value="whiteWon"
                       >
-                        White won
+                        White
+                         won
                       </option>
                       <option
                         value="blackWon"
                       >
-                        Black won
+                        Black
+                         won
                       </option>
                       <option
                         value="draw"
@@ -6951,12 +7123,14 @@ Object {
                       <option
                         value="whiteAborted"
                       >
-                        White Aborted
+                        White
+                         Aborted
                       </option>
                       <option
                         value="blackAborted"
                       >
-                        Black Aborted
+                        Black
+                         Aborted
                       </option>
                     </select>
                   </td>
@@ -7032,7 +7206,7 @@ Object {
                   </td>
                 </tr>
                 <tr
-                  class="pageround__tr"
+                  class="pageround__tr pageround__gameinprogress }"
                 >
                   <th
                     class="pageround__row-id table__number"
@@ -7094,12 +7268,14 @@ Object {
                       <option
                         value="whiteWon"
                       >
-                        White won
+                        White
+                         won
                       </option>
                       <option
                         value="blackWon"
                       >
-                        Black won
+                        Black
+                         won
                       </option>
                       <option
                         value="draw"
@@ -7114,12 +7290,14 @@ Object {
                       <option
                         value="whiteAborted"
                       >
-                        White Aborted
+                        White
+                         Aborted
                       </option>
                       <option
                         value="blackAborted"
                       >
-                        Black Aborted
+                        Black
+                         Aborted
                       </option>
                     </select>
                   </td>
@@ -7195,7 +7373,7 @@ Object {
                   </td>
                 </tr>
                 <tr
-                  class="pageround__tr"
+                  class="pageround__tr pageround__gameinprogress }"
                 >
                   <th
                     class="pageround__row-id table__number"
@@ -7257,12 +7435,14 @@ Object {
                       <option
                         value="whiteWon"
                       >
-                        White won
+                        White
+                         won
                       </option>
                       <option
                         value="blackWon"
                       >
-                        Black won
+                        Black
+                         won
                       </option>
                       <option
                         value="draw"
@@ -7277,12 +7457,14 @@ Object {
                       <option
                         value="whiteAborted"
                       >
-                        White Aborted
+                        White
+                         Aborted
                       </option>
                       <option
                         value="blackAborted"
                       >
-                        Black Aborted
+                        Black
+                         Aborted
                       </option>
                     </select>
                   </td>
@@ -7358,7 +7540,7 @@ Object {
                   </td>
                 </tr>
                 <tr
-                  class="pageround__tr"
+                  class="pageround__tr pageround__gameinprogress }"
                 >
                   <th
                     class="pageround__row-id table__number"
@@ -7420,12 +7602,14 @@ Object {
                       <option
                         value="whiteWon"
                       >
-                        White won
+                        White
+                         won
                       </option>
                       <option
                         value="blackWon"
                       >
-                        Black won
+                        Black
+                         won
                       </option>
                       <option
                         value="draw"
@@ -7440,12 +7624,14 @@ Object {
                       <option
                         value="whiteAborted"
                       >
-                        White Aborted
+                        White
+                         Aborted
                       </option>
                       <option
                         value="blackAborted"
                       >
-                        Black Aborted
+                        Black
+                         Aborted
                       </option>
                     </select>
                   </td>
@@ -7521,7 +7707,7 @@ Object {
                   </td>
                 </tr>
                 <tr
-                  class="pageround__tr"
+                  class="pageround__tr pageround__gameinprogress }"
                 >
                   <th
                     class="pageround__row-id table__number"
@@ -7583,12 +7769,14 @@ Object {
                       <option
                         value="whiteWon"
                       >
-                        White won
+                        White
+                         won
                       </option>
                       <option
                         value="blackWon"
                       >
-                        Black won
+                        Black
+                         won
                       </option>
                       <option
                         value="draw"
@@ -7603,12 +7791,14 @@ Object {
                       <option
                         value="whiteAborted"
                       >
-                        White Aborted
+                        White
+                         Aborted
                       </option>
                       <option
                         value="blackAborted"
                       >
-                        Black Aborted
+                        Black
+                         Aborted
                       </option>
                     </select>
                   </td>
@@ -7684,7 +7874,7 @@ Object {
                   </td>
                 </tr>
                 <tr
-                  class="pageround__tr"
+                  class="pageround__tr pageround__gameinprogress }"
                 >
                   <th
                     class="pageround__row-id table__number"
@@ -7746,12 +7936,14 @@ Object {
                       <option
                         value="whiteWon"
                       >
-                        White won
+                        White
+                         won
                       </option>
                       <option
                         value="blackWon"
                       >
-                        Black won
+                        Black
+                         won
                       </option>
                       <option
                         value="draw"
@@ -7766,12 +7958,14 @@ Object {
                       <option
                         value="whiteAborted"
                       >
-                        White Aborted
+                        White
+                         Aborted
                       </option>
                       <option
                         value="blackAborted"
                       >
-                        Black Aborted
+                        Black
+                         Aborted
                       </option>
                     </select>
                   </td>
@@ -7847,7 +8041,7 @@ Object {
                   </td>
                 </tr>
                 <tr
-                  class="pageround__tr"
+                  class="pageround__tr pageround__gameinprogress }"
                 >
                   <th
                     class="pageround__row-id table__number"
@@ -7909,12 +8103,14 @@ Object {
                       <option
                         value="whiteWon"
                       >
-                        White won
+                        White
+                         won
                       </option>
                       <option
                         value="blackWon"
                       >
-                        Black won
+                        Black
+                         won
                       </option>
                       <option
                         value="draw"
@@ -7929,12 +8125,14 @@ Object {
                       <option
                         value="whiteAborted"
                       >
-                        White Aborted
+                        White
+                         Aborted
                       </option>
                       <option
                         value="blackAborted"
                       >
-                        Black Aborted
+                        Black
+                         Aborted
                       </option>
                     </select>
                   </td>
@@ -8010,7 +8208,7 @@ Object {
                   </td>
                 </tr>
                 <tr
-                  class="pageround__tr"
+                  class="pageround__tr pageround__gameinprogress }"
                 >
                   <th
                     class="pageround__row-id table__number"
@@ -8072,12 +8270,14 @@ Object {
                       <option
                         value="whiteWon"
                       >
-                        White won
+                        White
+                         won
                       </option>
                       <option
                         value="blackWon"
                       >
-                        Black won
+                        Black
+                         won
                       </option>
                       <option
                         value="draw"
@@ -8092,12 +8292,14 @@ Object {
                       <option
                         value="whiteAborted"
                       >
-                        White Aborted
+                        White
+                         Aborted
                       </option>
                       <option
                         value="blackAborted"
                       >
-                        Black Aborted
+                        Black
+                         Aborted
                       </option>
                     </select>
                   </td>
@@ -8173,7 +8375,7 @@ Object {
                   </td>
                 </tr>
                 <tr
-                  class="pageround__tr"
+                  class="pageround__tr pageround__gameinprogress }"
                 >
                   <th
                     class="pageround__row-id table__number"
@@ -8235,12 +8437,14 @@ Object {
                       <option
                         value="whiteWon"
                       >
-                        White won
+                        White
+                         won
                       </option>
                       <option
                         value="blackWon"
                       >
-                        Black won
+                        Black
+                         won
                       </option>
                       <option
                         value="draw"
@@ -8255,12 +8459,14 @@ Object {
                       <option
                         value="whiteAborted"
                       >
-                        White Aborted
+                        White
+                         Aborted
                       </option>
                       <option
                         value="blackAborted"
                       >
-                        Black Aborted
+                        Black
+                         Aborted
                       </option>
                     </select>
                   </td>
@@ -8336,7 +8542,7 @@ Object {
                   </td>
                 </tr>
                 <tr
-                  class="pageround__tr"
+                  class="pageround__tr pageround__gameinprogress }"
                 >
                   <th
                     class="pageround__row-id table__number"
@@ -8398,12 +8604,14 @@ Object {
                       <option
                         value="whiteWon"
                       >
-                        White won
+                        White
+                         won
                       </option>
                       <option
                         value="blackWon"
                       >
-                        Black won
+                        Black
+                         won
                       </option>
                       <option
                         value="draw"
@@ -8418,12 +8626,14 @@ Object {
                       <option
                         value="whiteAborted"
                       >
-                        White Aborted
+                        White
+                         Aborted
                       </option>
                       <option
                         value="blackAborted"
                       >
-                        Black Aborted
+                        Black
+                         Aborted
                       </option>
                     </select>
                   </td>
@@ -8499,7 +8709,7 @@ Object {
                   </td>
                 </tr>
                 <tr
-                  class="pageround__tr"
+                  class="pageround__tr pageround__gameinprogress }"
                 >
                   <th
                     class="pageround__row-id table__number"
@@ -8561,12 +8771,14 @@ Object {
                       <option
                         value="whiteWon"
                       >
-                        White won
+                        White
+                         won
                       </option>
                       <option
                         value="blackWon"
                       >
-                        Black won
+                        Black
+                         won
                       </option>
                       <option
                         value="draw"
@@ -8581,12 +8793,14 @@ Object {
                       <option
                         value="whiteAborted"
                       >
-                        White Aborted
+                        White
+                         Aborted
                       </option>
                       <option
                         value="blackAborted"
                       >
-                        Black Aborted
+                        Black
+                         Aborted
                       </option>
                     </select>
                   </td>
@@ -8662,7 +8876,7 @@ Object {
                   </td>
                 </tr>
                 <tr
-                  class="pageround__tr"
+                  class="pageround__tr pageround__gameinprogress }"
                 >
                   <th
                     class="pageround__row-id table__number"
@@ -8724,12 +8938,14 @@ Object {
                       <option
                         value="whiteWon"
                       >
-                        White won
+                        White
+                         won
                       </option>
                       <option
                         value="blackWon"
                       >
-                        Black won
+                        Black
+                         won
                       </option>
                       <option
                         value="draw"
@@ -8744,12 +8960,14 @@ Object {
                       <option
                         value="whiteAborted"
                       >
-                        White Aborted
+                        White
+                         Aborted
                       </option>
                       <option
                         value="blackAborted"
                       >
-                        Black Aborted
+                        Black
+                         Aborted
                       </option>
                     </select>
                   </td>
@@ -8825,7 +9043,7 @@ Object {
                   </td>
                 </tr>
                 <tr
-                  class="pageround__tr"
+                  class="pageround__tr pageround__gameinprogress }"
                 >
                   <th
                     class="pageround__row-id table__number"
@@ -8887,12 +9105,14 @@ Object {
                       <option
                         value="whiteWon"
                       >
-                        White won
+                        White
+                         won
                       </option>
                       <option
                         value="blackWon"
                       >
-                        Black won
+                        Black
+                         won
                       </option>
                       <option
                         value="draw"
@@ -8907,12 +9127,14 @@ Object {
                       <option
                         value="whiteAborted"
                       >
-                        White Aborted
+                        White
+                         Aborted
                       </option>
                       <option
                         value="blackAborted"
                       >
-                        Black Aborted
+                        Black
+                         Aborted
                       </option>
                     </select>
                   </td>
@@ -8988,7 +9210,7 @@ Object {
                   </td>
                 </tr>
                 <tr
-                  class="pageround__tr"
+                  class="pageround__tr pageround__gameinprogress }"
                 >
                   <th
                     class="pageround__row-id table__number"
@@ -9050,12 +9272,14 @@ Object {
                       <option
                         value="whiteWon"
                       >
-                        White won
+                        White
+                         won
                       </option>
                       <option
                         value="blackWon"
                       >
-                        Black won
+                        Black
+                         won
                       </option>
                       <option
                         value="draw"
@@ -9070,12 +9294,14 @@ Object {
                       <option
                         value="whiteAborted"
                       >
-                        White Aborted
+                        White
+                         Aborted
                       </option>
                       <option
                         value="blackAborted"
                       >
-                        Black Aborted
+                        Black
+                         Aborted
                       </option>
                     </select>
                   </td>
@@ -9151,7 +9377,7 @@ Object {
                   </td>
                 </tr>
                 <tr
-                  class="pageround__tr"
+                  class="pageround__tr pageround__gameinprogress }"
                 >
                   <th
                     class="pageround__row-id table__number"
@@ -9213,12 +9439,14 @@ Object {
                       <option
                         value="whiteWon"
                       >
-                        White won
+                        White
+                         won
                       </option>
                       <option
                         value="blackWon"
                       >
-                        Black won
+                        Black
+                         won
                       </option>
                       <option
                         value="draw"
@@ -9233,12 +9461,14 @@ Object {
                       <option
                         value="whiteAborted"
                       >
-                        White Aborted
+                        White
+                         Aborted
                       </option>
                       <option
                         value="blackAborted"
                       >
-                        Black Aborted
+                        Black
+                         Aborted
                       </option>
                     </select>
                   </td>
@@ -9314,7 +9544,7 @@ Object {
                   </td>
                 </tr>
                 <tr
-                  class="pageround__tr"
+                  class="pageround__tr pageround__gameinprogress }"
                 >
                   <th
                     class="pageround__row-id table__number"
@@ -9376,12 +9606,14 @@ Object {
                       <option
                         value="whiteWon"
                       >
-                        White won
+                        White
+                         won
                       </option>
                       <option
                         value="blackWon"
                       >
-                        Black won
+                        Black
+                         won
                       </option>
                       <option
                         value="draw"
@@ -9396,12 +9628,14 @@ Object {
                       <option
                         value="whiteAborted"
                       >
-                        White Aborted
+                        White
+                         Aborted
                       </option>
                       <option
                         value="blackAborted"
                       >
-                        Black Aborted
+                        Black
+                         Aborted
                       </option>
                     </select>
                   </td>
@@ -9477,7 +9711,7 @@ Object {
                   </td>
                 </tr>
                 <tr
-                  class="pageround__tr"
+                  class="pageround__tr pageround__gameinprogress }"
                 >
                   <th
                     class="pageround__row-id table__number"
@@ -9539,12 +9773,14 @@ Object {
                       <option
                         value="whiteWon"
                       >
-                        White won
+                        White
+                         won
                       </option>
                       <option
                         value="blackWon"
                       >
-                        Black won
+                        Black
+                         won
                       </option>
                       <option
                         value="draw"
@@ -9559,12 +9795,14 @@ Object {
                       <option
                         value="whiteAborted"
                       >
-                        White Aborted
+                        White
+                         Aborted
                       </option>
                       <option
                         value="blackAborted"
                       >
-                        Black Aborted
+                        Black
+                         Aborted
                       </option>
                     </select>
                   </td>
@@ -9640,7 +9878,7 @@ Object {
                   </td>
                 </tr>
                 <tr
-                  class="pageround__tr"
+                  class="pageround__tr pageround__gameinprogress }"
                 >
                   <th
                     class="pageround__row-id table__number"
@@ -9702,12 +9940,14 @@ Object {
                       <option
                         value="whiteWon"
                       >
-                        White won
+                        White
+                         won
                       </option>
                       <option
                         value="blackWon"
                       >
-                        Black won
+                        Black
+                         won
                       </option>
                       <option
                         value="draw"
@@ -9722,12 +9962,14 @@ Object {
                       <option
                         value="whiteAborted"
                       >
-                        White Aborted
+                        White
+                         Aborted
                       </option>
                       <option
                         value="blackAborted"
                       >
-                        Black Aborted
+                        Black
+                         Aborted
                       </option>
                     </select>
                   </td>
@@ -9803,7 +10045,7 @@ Object {
                   </td>
                 </tr>
                 <tr
-                  class="pageround__tr"
+                  class="pageround__tr pageround__gameinprogress }"
                 >
                   <th
                     class="pageround__row-id table__number"
@@ -9865,12 +10107,14 @@ Object {
                       <option
                         value="whiteWon"
                       >
-                        White won
+                        White
+                         won
                       </option>
                       <option
                         value="blackWon"
                       >
-                        Black won
+                        Black
+                         won
                       </option>
                       <option
                         value="draw"
@@ -9885,12 +10129,14 @@ Object {
                       <option
                         value="whiteAborted"
                       >
-                        White Aborted
+                        White
+                         Aborted
                       </option>
                       <option
                         value="blackAborted"
                       >
-                        Black Aborted
+                        Black
+                         Aborted
                       </option>
                     </select>
                   </td>
@@ -9966,7 +10212,7 @@ Object {
                   </td>
                 </tr>
                 <tr
-                  class="pageround__tr"
+                  class="pageround__tr pageround__gameinprogress }"
                 >
                   <th
                     class="pageround__row-id table__number"
@@ -10028,12 +10274,14 @@ Object {
                       <option
                         value="whiteWon"
                       >
-                        White won
+                        White
+                         won
                       </option>
                       <option
                         value="blackWon"
                       >
-                        Black won
+                        Black
+                         won
                       </option>
                       <option
                         value="draw"
@@ -10048,12 +10296,14 @@ Object {
                       <option
                         value="whiteAborted"
                       >
-                        White Aborted
+                        White
+                         Aborted
                       </option>
                       <option
                         value="blackAborted"
                       >
-                        Black Aborted
+                        Black
+                         Aborted
                       </option>
                     </select>
                   </td>
@@ -10129,7 +10379,7 @@ Object {
                   </td>
                 </tr>
                 <tr
-                  class="pageround__tr"
+                  class="pageround__tr pageround__gameinprogress }"
                 >
                   <th
                     class="pageround__row-id table__number"
@@ -10191,12 +10441,14 @@ Object {
                       <option
                         value="whiteWon"
                       >
-                        White won
+                        White
+                         won
                       </option>
                       <option
                         value="blackWon"
                       >
-                        Black won
+                        Black
+                         won
                       </option>
                       <option
                         value="draw"
@@ -10211,12 +10463,14 @@ Object {
                       <option
                         value="whiteAborted"
                       >
-                        White Aborted
+                        White
+                         Aborted
                       </option>
                       <option
                         value="blackAborted"
                       >
-                        Black Aborted
+                        Black
+                         Aborted
                       </option>
                     </select>
                   </td>
@@ -10292,7 +10546,7 @@ Object {
                   </td>
                 </tr>
                 <tr
-                  class="pageround__tr"
+                  class="pageround__tr pageround__gameinprogress }"
                 >
                   <th
                     class="pageround__row-id table__number"
@@ -10354,12 +10608,14 @@ Object {
                       <option
                         value="whiteWon"
                       >
-                        White won
+                        White
+                         won
                       </option>
                       <option
                         value="blackWon"
                       >
-                        Black won
+                        Black
+                         won
                       </option>
                       <option
                         value="draw"
@@ -10374,12 +10630,14 @@ Object {
                       <option
                         value="whiteAborted"
                       >
-                        White Aborted
+                        White
+                         Aborted
                       </option>
                       <option
                         value="blackAborted"
                       >
-                        Black Aborted
+                        Black
+                         Aborted
                       </option>
                     </select>
                   </td>
@@ -10455,7 +10713,7 @@ Object {
                   </td>
                 </tr>
                 <tr
-                  class="pageround__tr"
+                  class="pageround__tr pageround__gameinprogress }"
                 >
                   <th
                     class="pageround__row-id table__number"
@@ -10517,12 +10775,14 @@ Object {
                       <option
                         value="whiteWon"
                       >
-                        White won
+                        White
+                         won
                       </option>
                       <option
                         value="blackWon"
                       >
-                        Black won
+                        Black
+                         won
                       </option>
                       <option
                         value="draw"
@@ -10537,12 +10797,14 @@ Object {
                       <option
                         value="whiteAborted"
                       >
-                        White Aborted
+                        White
+                         Aborted
                       </option>
                       <option
                         value="blackAborted"
                       >
-                        Black Aborted
+                        Black
+                         Aborted
                       </option>
                     </select>
                   </td>
@@ -10618,7 +10880,7 @@ Object {
                   </td>
                 </tr>
                 <tr
-                  class="pageround__tr"
+                  class="pageround__tr pageround__gameinprogress }"
                 >
                   <th
                     class="pageround__row-id table__number"
@@ -10680,12 +10942,14 @@ Object {
                       <option
                         value="whiteWon"
                       >
-                        White won
+                        White
+                         won
                       </option>
                       <option
                         value="blackWon"
                       >
-                        Black won
+                        Black
+                         won
                       </option>
                       <option
                         value="draw"
@@ -10700,12 +10964,14 @@ Object {
                       <option
                         value="whiteAborted"
                       >
-                        White Aborted
+                        White
+                         Aborted
                       </option>
                       <option
                         value="blackAborted"
                       >
-                        Black Aborted
+                        Black
+                         Aborted
                       </option>
                     </select>
                   </td>
@@ -10785,10 +11051,10 @@ Object {
           </div>
         </div>
         <div
-          aria-labelledby="tabs--1--tab--1"
+          aria-labelledby="tabs--tab--1"
           data-reach-tab-panel=""
           hidden=""
-          id="tabs--1--panel--1"
+          id="tabs--panel--1"
           role="tabpanel"
           tabindex="-1"
         >

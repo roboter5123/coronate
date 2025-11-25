@@ -10,9 +10,15 @@ open JestDom
 open ReactTestingLibrary
 open FireEvent
 
+let renderAsync = async x => {
+  let page = render(x)
+  await waitForElementToBeRemoved(() => page->queryByText(#Str("No tournaments are added yet.")))
+  page
+}
+
 /* I think the Reach Dialog component may have a problem with this? */
-test("Creating a new tournament works", t => {
-  let page = render(<PageTournamentList />)
+testAsync("Creating a new tournament works", async t => {
+  let page = await renderAsync(<PageTournamentList />)
   page->getByText(#RegExp(%re("/add tournament/i")))->click
   page
   ->getByLabelText(#RegExp(%re("/name:/i")))
@@ -25,8 +31,8 @@ test("Creating a new tournament works", t => {
   t->expect(page->getByLabelText(#Str("Delete “Deep 13 Open”")))->toBeInTheDocument
 })
 
-test("Deleting a tournament works", t => {
-  let page = render(<PageTournamentList />)
+testAsync("Deleting a tournament works", async t => {
+  let page = await renderAsync(<PageTournamentList />)
   page->getByLabelText(#Str("Delete “Simple Pairing”"))->click
   t->expect(page->queryByText(#RegExp(%re("/simple pairing/"))))->Expect.toBeNull
 })
