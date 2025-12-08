@@ -43,6 +43,7 @@ module Map: {
   let fromStringArray: array<(string, 'v)> => t<'v>
 
   let toStringArray: t<'v> => array<(string, 'v)>
+  let keysToStringArray: t<'v> => array<string>
 }
 
 module Set: {

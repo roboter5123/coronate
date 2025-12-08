@@ -5,15 +5,14 @@
   License, v. 2.0. If a copy of the MPL was not distributed with this
   file, You can obtain one at http://mozilla.org/MPL/2.0/.
 */
+
+/** Ensure that all LocalForage plugins get loaded. */
+let init: unit => unit
+
 let loadDemoDB: unit => unit
 
-module Config: module type of LocalForage.Id.MakeEncodable(Coronate.Data.Config)
-
-module Tournament: module type of LocalForage.Id.MakeEncodable(Coronate.Data.Tournament)
-
-module Player: module type of LocalForage.Id.MakeEncodable(Coronate.Data.Player)
-
-let tournaments: LocalForage.Map.t<Data.Tournament.t, Tournament.identity>
+let getTourney: Data.Id.t => Promise.t<option<Data.Tournament.t>>
+let setTourney: (Data.Id.t, Data.Tournament.t) => Promise.t<unit>
 
 type action<'a> =
   | Del(Data.Id.t)

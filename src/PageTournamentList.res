@@ -62,7 +62,7 @@ let make = (~windowDispatch=_ => ()) => {
         </button>
       </div>
       <HelpDialogs.SwissTournament state=helpDialog ariaLabel="Tournament information" />
-      {if Map.isEmpty(tourneys) {
+      {if Array.length(sorted.table) === 0 {
         <p> {React.string("No tournaments are added yet.")} </p>
       } else {
         <table>
@@ -85,7 +85,7 @@ let make = (~windowDispatch=_ => ()) => {
             </tr>
           </thead>
           <tbody className="content">
-            {Array.map(sorted.Hooks.table, ({id, date, name, _}) =>
+            {Array.map(sorted.table, ({id, date, name, _}) =>
               <tr key={id->Data.Id.toString}>
                 <td>
                   <Link to_=Tournament(id, TourneyPage.Players)> {React.string(name)} </Link>

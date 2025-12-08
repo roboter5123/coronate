@@ -42,7 +42,6 @@ let isLoadedDone = x =>
 
 @react.component
 let make = (~children, ~tourneyId, ~windowDispatch) => {
-  let tourneyId = Id.toString(tourneyId)
   let (tourney, setTourney) = React.useReducer(tournamentReducer, emptyTourney)
   let {name, playerIds, roundList, _} = tourney
   let {items: players, dispatch: playersDispatch, loaded: arePlayersLoaded} = Db.useAllPlayers()
@@ -61,8 +60,7 @@ let make = (~children, ~tourneyId, ~windowDispatch) => {
   /* Initialize the tournament from the database. */
   React.useEffect1(() => {
     let didCancel = ref(false)
-    Db.tournaments
-    ->LocalForage.Map.getItem(~key=tourneyId)
+    Db.getTourney(tourneyId)
     ->Promise.thenResolve(value =>
       switch value {
       | _ if didCancel.contents => ()
@@ -92,8 +90,8 @@ let make = (~children, ~tourneyId, ~windowDispatch) => {
        * is necessary. If you remove this and someone enters the URL for a
        * nonexistant tournament, then you can corrupt the database.
        */
-      if Id.eq(Id.fromString(tourneyId), tourney.id) {
-        Db.tournaments->LocalForage.Map.setItem(~key=tourneyId, ~v=tourney)->ignore
+      if Id.eq(tourneyId, tourney.id) {
+        Db.setTourney(tourneyId, tourney)->ignore
       }
     }
     None

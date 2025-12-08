@@ -6,29 +6,230 @@
   file, You can obtain one at http://mozilla.org/MPL/2.0/.
 */
 open! Belt
+module D = Js.Dict
+module A = Js.Array2
+
+/** Use LocalForage to automatically save state data in browsers. In a testing environment, replace
+    it with an in-memory read-only store. */
+module type Encodable = {
+  type t
+  let encode: t => Js.Json.t
+  let decode: Js.Json.t => t
+}
+
+type encodable<'a> = module(Encodable with type t = 'a)
+
+type config
+
+@obj
+external config: (~name: string, ~storeName: string, unit) => config = ""
+
+/** A generic storage interface. */
+module type STORE = {
+  /** A "record" stores an entire data structure in one instance. */
+  module Record: {
+    type t<'a>
+    let make: (config, encodable<'a>) => t<'a>
+    let set: (t<'a>, ~items: 'a) => Promise.t<unit>
+    let get: t<'a> => Promise.t<'a>
+    let setDataForTesting: (t<'a>, ~items: 'a) => unit
+  }
+
+  /** A "map" stores many values mapped to keys. */
+  module Map: {
+    type t<'a>
+    let make: (config, encodable<'a>) => t<'a>
+    let getItem: (t<'a>, ~key: Data.Id.t) => Promise.t<option<'a>>
+    let setItem: (t<'a>, ~key: Data.Id.t, ~v: 'a) => Promise.t<unit>
+    let setItems: (t<'a>, ~items: Data.Id.Map.t<'a>) => Promise.t<unit>
+    let getAllItems: t<'a> => Promise.t<array<(string, 'a)>>
+    let getKeys: t<'a> => Promise.t<array<string>>
+    let removeItems: (t<'a>, ~items: array<string>) => Promise.t<unit>
+    let setDataForTesting: (t<'a>, ~items: Data.Id.Map.t<'a>) => unit
+  }
+
+  let init: unit => unit
+  let clear: unit => Promise.t<unit>
+}
+
+module LocalForage: STORE = {
+  type localforage
+
+  @module("localforage") @scope("default")
+  external createInstance: config => localforage = "createInstance"
+
+  @module("localforage") @scope("default") external clear: unit => Promise.t<unit> = "clear"
+
+  @send
+  external setItem: (localforage, string, Js.Json.t) => Promise.t<unit> = "setItem"
+  @send
+  external getItem: (localforage, string) => Promise.t<Js.Nullable.t<Js.Json.t>> = "getItem"
+  @send external keys: localforage => Promise.t<array<string>> = "keys"
+
+  module GetItems = {
+    @module("localforage-getitems")
+    external extendPrototype: localforage => unit = "extendPrototype"
+    @send
+    external allDict: localforage => Promise.t<Js.Dict.t<Js.Json.t>> = "getItems"
+    @send external allJson: localforage => Promise.t<Js.Json.t> = "getItems"
+  }
+
+  module RemoveItems = {
+    @module("localforage-removeitems")
+    external extendPrototype: localforage => unit = "extendPrototype"
+    @send
+    external fromArray: (localforage, array<string>) => Promise.t<unit> = "removeItems"
+  }
+
+  module SetItems = {
+    @module("localforage-setitems")
+    external extendPrototype: localforage => unit = "extendPrototype"
+    @send
+    external fromDict: (localforage, Js.Dict.t<Js.Json.t>) => Promise.t<unit> = "setItems"
+    @send
+    external fromJson: (localforage, Js.Json.t) => Promise.t<unit> = "setItems"
+  }
+
+  module Record = {
+    type t<'a> = {
+      store: localforage,
+      encode: 'a => Js.Json.t,
+      decode: Js.Json.t => 'a,
+    }
+
+    let make = (config, type t, data: encodable<t>) => {
+      module Data = unpack(data)
+      {store: createInstance(config), encode: Data.encode, decode: Data.decode}
+    }
+
+    let get = async ({store, decode, _}) => {
+      let items = await GetItems.allJson(store)
+      decode(items)
+    }
+
+    let set = ({store, encode, _}, ~items) => SetItems.fromJson(store, encode(items))
+    let setDataForTesting = (_, ~items as _) => ()
+  }
+
+  module Map = {
+    type t<'a> = {
+      store: localforage,
+      encode: 'a => Js.Json.t,
+      decode: Js.Json.t => 'a,
+    }
+
+    let make = (config, type t, data: encodable<t>) => {
+      module Data = unpack(data)
+      {store: createInstance(config), encode: Data.encode, decode: Data.decode}
+    }
+
+    let getItem = async ({store, decode, _}, ~key) => {
+      let value = await getItem(store, Data.Id.toString(key))
+      value->Js.Nullable.toOption->Belt.Option.mapU(decode)
+    }
+
+    let setItem = ({store, encode, _}, ~key, ~v) => setItem(store, Data.Id.toString(key), encode(v))
+
+    let getKeys = ({store, _}) => keys(store)
+
+    let mapValues = ((key, value), ~f) => (key, f(value))
+
+    let parseItems = (decode, items) => items->D.entries->A.map(mapValues(~f=decode, ...))
+
+    let getAllItems = async ({store, decode, _}) => {
+      let items = await GetItems.allDict(store)
+      parseItems(decode, items)
+    }
+
+    let setItems = ({store, encode, _}, ~items) =>
+      items
+      ->Map.map(encode)
+      ->Data.Id.Map.toStringArray
+      ->D.fromArray
+      ->(SetItems.fromDict(store, _))
+
+    let removeItems = ({store, _}, ~items) => RemoveItems.fromArray(store, items)
+    let setDataForTesting = (_, ~items as _) => ()
+  }
+
+  @module("localforage") external localForage: localforage = "default"
+
+  let init = () => {
+    GetItems.extendPrototype(localForage)
+    RemoveItems.extendPrototype(localForage)
+    SetItems.extendPrototype(localForage)
+  }
+}
+
+/** This store reads data from memory. Writing to it is a no-op. */
+module TestStore: STORE = {
+  module Record = {
+    type t<'a> = ref<option<'a>>
+    let make = (_, _) => ref(None)
+    let set = async (_, ~items as _) => ()
+    let get = t =>
+      switch t.contents {
+      | None => Promise.reject(Not_found)
+      | Some(x) => Promise.resolve(x)
+      }
+    let setDataForTesting = (t, ~items) => t.contents = Some(items)
+  }
+
+  module Map = {
+    type t<'a> = ref<Data.Id.Map.t<'a>>
+    let make = (_, _) => ref(Map.make(~id=Data.Id.id))
+    let getItem = async (t, ~key) => t.contents->Map.get(key)
+    let setItem = async (_, ~key as _, ~v as _) => ()
+    let setItems = async (_, ~items as _) => ()
+    let getAllItems = async t => t.contents->Data.Id.Map.toStringArray
+    let getKeys = async t => t.contents->Data.Id.Map.keysToStringArray
+    let removeItems = async (_, ~items as _) => ()
+    let setDataForTesting = (t, ~items) => t.contents = items
+  }
+
+  let init = () => ()
+  let clear = async () => ()
+}
+
+@val external isTest: bool = "__IS_TEST__"
+
+let store: module(STORE) = if isTest {
+  module(TestStore)
+} else {
+  module(LocalForage)
+}
+
+module Store = unpack(store)
+
+let init = Store.init
 
 /* ******************************************************************************
  * Initialize the databases
  ***************************************************************************** */
-let localForageConfig = LocalForage.Config.make(~name="Coronate", ...)
-module Config = LocalForage.Id.MakeEncodable(Data.Config)
-module Player = LocalForage.Id.MakeEncodable(Data.Player)
-module Tournament = LocalForage.Id.MakeEncodable(Data.Tournament)
-module Auth = LocalForage.Id.MakeEncodable(Data.Auth)
-let configDb = LocalForage.Record.make(localForageConfig(~storeName="Options", ()), module(Config))
-let authDb = LocalForage.Record.make(localForageConfig(~storeName="Auth", ()), module(Auth))
-let players = LocalForage.Map.make(localForageConfig(~storeName="Players", ()), module(Player))
-let tournaments = LocalForage.Map.make(
+let localForageConfig = config(~name="Coronate", ...)
+let configDb = Store.Record.make(localForageConfig(~storeName="Options", ()), module(Data.Config))
+let authDb = Store.Record.make(localForageConfig(~storeName="Auth", ()), module(Data.Auth))
+let players = Store.Map.make(localForageConfig(~storeName="Players", ()), module(Data.Player))
+let tournaments = Store.Map.make(
   localForageConfig(~storeName="Tournaments", ()),
-  module(Tournament),
+  module(Data.Tournament),
 )
+
+if isTest {
+  configDb->Store.Record.setDataForTesting(~items=TestData.config)
+  tournaments->Store.Map.setDataForTesting(~items=TestData.tournaments)
+  players->Store.Map.setDataForTesting(~items=TestData.players)
+}
+
+let getTourney = key => Store.Map.getItem(tournaments, ~key)
+let setTourney = (key, v) => Store.Map.setItem(tournaments, ~key, ~v)
 
 let loadDemoDB = (_): unit => {
   let () = %raw(`document.body.style.cursor = "wait"`)
   Promise.all3((
-    LocalForage.Record.set(configDb, ~items=DemoData.config),
-    LocalForage.Map.setItems(players, ~items=DemoData.players->Data.Id.Map.toStringArray),
-    LocalForage.Map.setItems(tournaments, ~items=DemoData.tournaments->Data.Id.Map.toStringArray),
+    Store.Record.set(configDb, ~items=DemoData.config),
+    Store.Map.setItems(players, ~items=DemoData.players),
+    Store.Map.setItems(tournaments, ~items=DemoData.tournaments),
   ))
   ->Promise.thenResolve(_ => Webapi.Dom.Window.alert(Webapi.Dom.window, "Demo data loaded!"))
   ->Promise.catch(_ => {
@@ -71,7 +272,7 @@ let useAllDb = store => {
  */
   React.useEffect0(() => {
     let didCancel = ref(false)
-    LocalForage.Map.getAllItems(store)
+    Store.Map.getAllItems(store)
     ->Promise.thenResolve(results =>
       if !didCancel.contents {
         dispatch(SetAll(results->Data.Id.Map.fromStringArray))
@@ -84,7 +285,7 @@ let useAllDb = store => {
              corrupt database will get wiped. In the future, we may need to
              replace this with more elegant error recovery. */
         Js.Console.error(error)
-        ()->LocalForage.Js.clear->ignore
+        Store.clear()->ignore
         loaded.setTrue()
       }
       Promise.resolve()
@@ -98,7 +299,7 @@ let useAllDb = store => {
   React.useEffect2(() => {
     if loaded.state {
       store
-      ->LocalForage.Map.setItems(~items=items->Data.Id.Map.toStringArray)
+      ->Store.Map.setItems(~items)
       /* Delete any DB keys that aren't present in the state, with the
          assumption that the state must have intentionally removed them.
 
@@ -107,10 +308,10 @@ let useAllDb = store => {
          newer render.
          
          It needs to be fixed. */
-      ->Promise.then(_ => LocalForage.Map.getKeys(store))
+      ->Promise.then(_ => Store.Map.getKeys(store))
       ->Promise.then(keys => {
         let deleted = Array.keep(keys, x => !Map.has(items, Data.Id.fromString(x)))
-        LocalForage.Map.removeItems(store, ~items=deleted)
+        Store.Map.removeItems(store, ~items=deleted)
       })
       ->ignore
     }
@@ -163,7 +364,7 @@ let useConfig = () => {
   /* Load items from the database. */
   React.useEffect0(() => {
     let didCancel = ref(false)
-    LocalForage.Record.get(configDb)
+    Store.Record.get(configDb)
     ->Promise.thenResolve(values =>
       if !didCancel.contents {
         dispatch(SetState(values))
@@ -173,7 +374,7 @@ let useConfig = () => {
     ->Promise.catch(error => {
       if !didCancel.contents {
         Js.Console.error(error)
-        ()->LocalForage.Js.clear->ignore
+        Store.clear()->ignore
         dispatch(SetState(Data.Config.default))
         loaded.setTrue()
       }
@@ -185,7 +386,7 @@ let useConfig = () => {
   /* Save items to the database. */
   React.useEffect2(() => {
     if loaded.state {
-      LocalForage.Record.set(configDb, ~items=config)->ignore
+      Store.Record.set(configDb, ~items=config)->ignore
     }
     None
   }, (config, loaded.state))
@@ -214,7 +415,7 @@ let useAuth = () => {
   /* Load items from the database. */
   React.useEffect0(() => {
     let didCancel = ref(false)
-    LocalForage.Record.get(authDb)
+    Store.Record.get(authDb)
     ->Promise.thenResolve(values =>
       if !didCancel.contents {
         dispatch(SetState(values))
@@ -223,7 +424,7 @@ let useAuth = () => {
     )
     ->Promise.catch(_ => {
       if !didCancel.contents {
-        ()->LocalForage.Js.clear->ignore
+        Store.clear()->ignore
         dispatch(SetState(Data.Auth.default))
         loaded.setTrue()
       }
@@ -235,7 +436,7 @@ let useAuth = () => {
   /* Save items to the database. */
   React.useEffect2(() => {
     if loaded.state {
-      LocalForage.Record.set(authDb, ~items=auth)->ignore
+      Store.Record.set(authDb, ~items=auth)->ignore
     }
     None
   }, (auth, loaded.state))

@@ -1,3 +1,0 @@
-exports.createInstance = function () {
-  return {}
-}
