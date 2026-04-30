@@ -4,6 +4,9 @@ FROM node:24-alpine AS builder
 # Create working directory
 WORKDIR /app
 
+#Install git for build
+RUN apk add --no-cache git
+
 #Enable corepack and isntall pnpm
 RUN corepack enable \
  && corepack prepare pnpm@9.0.0 --activate
@@ -27,7 +30,7 @@ FROM nginx:alpine
 RUN rm /etc/nginx/conf.d/default.conf
 
 # Copy build output
-COPY --from=builder /app/dist/frontend/browser /usr/share/nginx/html
+COPY --from=builder /app/dist /usr/share/nginx/html
 
 # Copy nginx config into correct folder
 COPY nginx.conf /etc/nginx/conf.d/default.conf
